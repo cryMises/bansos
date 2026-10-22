@@ -1,0 +1,46 @@
+# Virtual environments and local tooling
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# Generated SQLite databases and journals
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+*.sqlite-journal
+*.sqlite-wal
+*.sqlite-shm
+data/*
+!data/.gitkeep
+
+# Generated exports (add a file deliberately with `git add -f` if intended)
+exports/*
+!exports/.gitkeep
+
+# Secrets and local configuration
+.env
+.env.*
+*.secret
+secrets/
+*.pem
+*.key
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+*.swp
+*.tmp

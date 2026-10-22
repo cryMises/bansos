@@ -1,0 +1,7 @@
+# BANSOS has no third-party runtime dependencies.
+#
+# It uses only the Python 3 standard library: argparse, csv, json, sqlite3,
+# pathlib, dataclasses, datetime, urllib.parse, and unittest for tests.
+#
+# Installing this file therefore intentionally installs nothing:
+#   python3 -m pip install -r requirements.txt
