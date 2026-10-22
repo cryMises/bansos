@@ -39,9 +39,11 @@ Version **0.1.0** implements the core workflows:
 - Phase 2: `filter`, `edit`, `delete`, `verify`, `stale`, `stats`
 - Phase 3: CSV/JSON export, validated JSON import, duplicate handling, demo seed,
   tests, and documentation
+- Terminal presentation: responsive tables, a `stats` dashboard with charts,
+  and ASCII/no-colour fallbacks
 - Phase 4 (local web dashboard and optional integrations) is **not implemented**
 
-The current test suite has 42 standard-library tests. They run without internet
+The current test suite has 54 standard-library tests. They run without internet
 access and use temporary databases.
 
 ## Limitations and non-goals
@@ -212,6 +214,69 @@ The application does **not** fetch the URL. The evidence field should describe t
 specific official page and what it said. Keep observations in `--notes` and
 verification observations in `--evidence`.
 
+### Terminal output
+
+`list`, `search`, `filter`, and `stale` render responsive box tables. The table
+drops less important columns on narrow terminals and wraps long review reasons
+instead of overflowing. Illustrative output:
+
+```text
+── CATALOG ────────────────────────────────────────────────────────────
+2 resource(s) shown
+╭─────┬────────────┬──────────────────────────┬───────────────┬────────────╮
+│  ID │ STATE      │ NAME                     │ PROVIDER      │ CHECKED    │
+├─────┼────────────┼──────────────────────────┼───────────────┼────────────┤
+│   1 │ ● VERIFIED │ Example free database    │ Example Org   │ 2026-10-22 │
+│   2 │ ◆ DISPUTED │ Example contested offer  │ Example Org   │ 2026-10-22 │
+╰─────┴────────────┴──────────────────────────┴───────────────┴────────────╯
+States  ● verified   ○ unverified   ◐ stale   ✖ expired   ◆ disputed
+```
+
+`stats` is a small dashboard with key metrics, a stacked research-status bar,
+and horizontal bar charts for categories, offer types, verification status, and
+payment requirements. Numbers below are illustrative:
+
+```text
+BANSOS CATALOG
+Generated 2026-10-22T00:00:00Z · 12 resources
+
+╭──────────────────┬─────────────────┬─────────────────────┬───────────────────╮
+│ RESOURCES        │ VERIFIED        │ NEEDS REVIEW        │ EVIDENCE          │
+│ 12               │ 8 · 67%         │ 4                   │ 12 · 100%         │
+╰──────────────────┴─────────────────┴─────────────────────┴───────────────────╯
+
+── RESEARCH STATUS ────────────────────────────────────────────────────
+████████████████████████████████████████░░░░░░░░
+8 verified · 2 disputed · 2 unverified
+```
+
+`show` uses a header panel, section rules, wrapped fields, colored state badges,
+and a verification-history table. Actionable warnings are boxed above the
+record details for unverified, stale, expired, and disputed records.
+
+Colour is automatic only when standard output is an interactive terminal.
+Redirected or piped output stays free of ANSI escape sequences, and `--json`
+output is never styled or wrapped. When the output encoding cannot represent
+Unicode box characters, BANSOS falls back to ASCII borders and symbols.
+
+These environment variables control presentation without changing stored data:
+
+| Variable | Effect |
+| --- | --- |
+| `NO_COLOR` | Disable colour whenever it is present (unless `BANSOS_COLOR=always`) |
+| `BANSOS_COLOR` | `auto` (default), `always`, or `never` |
+| `BANSOS_ASCII` | Set to `1`, `true`, or `yes` to force ASCII borders and symbols |
+| `BANSOS_WIDTH` | Force a display width (clamped to 40–200 columns) |
+| `COLUMNS` | Used for width detection when `BANSOS_WIDTH` is unset |
+
+Examples:
+
+```sh
+BANSOS_COLOR=never bansos list
+BANSOS_ASCII=1 BANSOS_WIDTH=60 bansos list
+BANSOS_COLOR=always bansos stats
+```
+
 Edit and delete safely:
 
 ```sh
@@ -249,15 +314,15 @@ They are not real offers.
 | --- | --- |
 | `bansos init` | Create or migrate the SQLite database |
 | `bansos add` | Add a resource interactively or with options |
-| `bansos list` | List saved resources |
-| `bansos show ID` | Display all fields and verification history |
+| `bansos list` | List saved resources in a responsive table |
+| `bansos show ID` | Display formatted fields, warnings, and verification history |
 | `bansos search QUERY...` | Search names, providers, descriptions, and notes |
 | `bansos filter` | Filter by category, offer type, eligibility, status, payment, country |
 | `bansos edit ID` | Update fields without changing verification |
 | `bansos delete ID` | Delete after confirmation, or with `--yes` |
 | `bansos verify ID` | Record evidence, date checked, and verification status |
 | `bansos stale` | Find unverified, stale, expired, or disputed records |
-| `bansos stats` | Show category, offer-type, payment, and verification totals |
+| `bansos stats` | Show KPI cards, status graph, and category/offer/payment charts |
 | `bansos export` | Export all or filtered records to CSV/JSON |
 | `bansos import FILE` | Validate and import JSON records with duplicate handling |
 | `bansos seed` | Optionally load clearly fictional demo records |
@@ -451,7 +516,8 @@ delete them afterwards.
 src/bansos/
   __init__.py    version
   __main__.py    python -m bansos entry point
-  cli.py         argparse CLI and presentation
+  cli.py         argparse CLI and command orchestration
+  presentation.py  terminal tables, panels, colours, badges, and charts
   db.py          SQLite schema, migrations, repository, import/export
   models.py      constants, dataclasses, validation, normalization
   search.py      parameterized search/filter query construction

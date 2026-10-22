@@ -31,7 +31,9 @@
   field rejection, all-or-nothing writes, `skip`/`update`/`error` duplicate modes,
   and `--dry-run`
 - Clearly fictional, example.com-only demo seed data
-- 42 standard-library tests with no network or real external services
+- 54 standard-library tests with no network or real external services
+- Responsive terminal presentation: box tables, KPI dashboard, bar charts, and
+  ASCII/no-colour fallbacks without adding runtime dependencies
 - README, schema documentation, roadmap, `.gitignore`, and optional packaging
 
 ### Phase 4 — not started (optional)
@@ -84,8 +86,8 @@
 - [ ] Document and test a native Termux workflow on a recent Android release
 - [ ] Test on a filesystem with constrained locking behavior and add graceful
       diagnostics
-- [ ] Verify terminal width/readability on small screens (current tables are
-      intentionally compact)
+- [ ] Verify terminal width/readability on small screens (tables and detail views
+      now adapt to the detected width, down to a 40-column layout)
 - [ ] Optional Termux:Widget shortcuts for common read-only commands
 
 ### Optional local dashboard

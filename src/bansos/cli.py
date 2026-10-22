@@ -17,7 +17,7 @@ import tempfile
 from pathlib import Path
 from typing import Any, Mapping, Optional, Sequence
 
-from . import __version__, db, models, search, seed, verify
+from . import __version__, db, models, presentation as ui, search, seed, verify
 
 PROG = "bansos"
 
@@ -74,63 +74,89 @@ def _resolve_db_path(args: argparse.Namespace) -> Path:
 
 
 def _error(message: str) -> None:
-    print(f"error: {message}", file=sys.stderr)
+    print(f"{ui.mark_error()} error: {message}", file=sys.stderr)
 
 
 def _print_json(value: Any) -> None:
     print(json.dumps(value, indent=2, ensure_ascii=False))
 
 
-def _shorten(value: Any, width: int) -> str:
-    text = "" if value is None else str(value)
-    text = text.replace("\r", " ").replace("\n", " ").replace("\t", " ")
-    text = " ".join(text.split())
-    if len(text) > width:
-        if width <= 3:
-            return text[:width]
-        return text[: width - 3] + "..."
-    return text
+def _print_wrapped(text: str, *, width: int, style: str = "dim") -> None:
+    current = ui.theme()
+    for line in ui.wrap_text(text, width):
+        print(current.paint(line, style) if style else line)
 
 
-def _print_table(
-    headers: Sequence[str],
-    rows: Sequence[Sequence[Any]],
-    widths: Sequence[int],
+def _print_resources(
+    resources: Sequence[models.Resource],
+    *,
+    title: str = "Catalog",
+    subtitle: Optional[str] = None,
 ) -> None:
-    def render(values: Sequence[Any]) -> str:
-        cells = []
-        for value, width in zip(values, widths):
-            cells.append(_shorten(value, width).ljust(width))
-        return "  ".join(cells).rstrip()
-
-    print(render(headers))
-    print("  ".join("-" * width for width in widths).rstrip())
-    for row in rows:
-        print(render(row))
-
-
-def _resource_rows(resources: Sequence[models.Resource]) -> list[list[Any]]:
+    current = ui.theme()
+    width = current.total_width(110)
     rows: list[list[Any]] = []
     for resource in resources:
         state = verify.effective_state(resource)
+        checked = (resource.last_verified_at or "never")[:10]
         rows.append(
             [
                 resource.id,
-                state.label,
+                ui.state_cell(state.code, state.label),
                 resource.name,
                 resource.provider,
-                (resource.last_verified_at or "never")[:10],
+                resource.category,
+                checked,
             ]
         )
-    return rows
 
+    if width >= 108:
+        columns = [
+            ui.Column("ID", align="right", min_width=3),
+            ui.Column("STATE", min_width=10),
+            ui.Column("NAME", min_width=16, max_width=34, flex=True),
+            ui.Column("PROVIDER", min_width=10, max_width=22, flex=True),
+            ui.Column("CATEGORY", min_width=10, max_width=20, flex=True),
+            ui.Column("CHECKED", min_width=10),
+        ]
+        selected = [[row[0], row[1], row[2], row[3], row[4], row[5]] for row in rows]
+    elif width >= 76:
+        columns = [
+            ui.Column("ID", align="right", min_width=3),
+            ui.Column("STATE", min_width=10),
+            ui.Column("NAME", min_width=16, max_width=34, flex=True),
+            ui.Column("PROVIDER", min_width=10, max_width=24, flex=True),
+            ui.Column("CHECKED", min_width=10),
+        ]
+        selected = [[row[0], row[1], row[2], row[3], row[5]] for row in rows]
+    elif width >= 60:
+        columns = [
+            ui.Column("ID", align="right", min_width=3),
+            ui.Column("STATE", min_width=10),
+            ui.Column("NAME", min_width=14, max_width=40, flex=True),
+            ui.Column("CHECKED", min_width=10),
+        ]
+        selected = [[row[0], row[1], row[2], row[5]] for row in rows]
+    else:
+        columns = [
+            ui.Column("ID", align="right", min_width=3),
+            ui.Column("STATE", min_width=10),
+            ui.Column("NAME", min_width=12, max_width=42, flex=True),
+        ]
+        selected = [[row[0], row[1], row[2]] for row in rows]
 
-def _print_resources(resources: Sequence[models.Resource]) -> None:
-    _print_table(
-        ("ID", "STATE", "NAME", "PROVIDER", "CHECKED"),
-        _resource_rows(resources),
-        (4, 10, 28, 20, 10),
+    print(ui.rule(title, width=width))
+    if subtitle:
+        _print_wrapped(subtitle, width=width)
+    print(
+        ui.render_table(
+            columns,
+            selected,
+            width=width,
+        )
     )
+    if selected:
+        print(ui.state_legend(width))
 
 
 def _stdin_is_interactive() -> bool:
@@ -199,28 +225,93 @@ def _prompt_category(default: Optional[str] = None) -> str:
 
 
 def _print_verification_warning(
-    resource: models.Resource, state: verify.ResearchState
+    state: verify.ResearchState,
+    *,
+    width: int,
 ) -> None:
     if state.code == "unverified":
+        print()
         print(
-            "\nWARNING: this record has no verification evidence. "
-            "Use 'bansos verify ID --evidence ...' after manual research."
+            ui.panel(
+                [
+                    "No verification evidence is recorded.",
+                    "Use 'bansos verify ID --evidence ...' after reading the "
+                    "official source.",
+                ],
+                title="Unverified record",
+                width=width,
+                border_style="cyan",
+            )
         )
     elif state.code == "expired":
-        print(f"\nWARNING: {state.detail}. Verify before relying on this record.")
+        print()
+        print(
+            ui.panel(
+                [
+                    state.detail,
+                    "Verify before relying on this record or its source links.",
+                ],
+                title="Expired record",
+                width=width,
+                border_style="red",
+            )
+        )
     elif state.code == "stale":
-        print(f"\nWARNING: {state.detail}. Re-check the official source.")
+        print()
+        print(
+            ui.panel(
+                [
+                    state.detail,
+                    "Re-check the official source before relying on this record.",
+                ],
+                title="Stale record",
+                width=width,
+                border_style="yellow",
+            )
+        )
     elif state.code == "disputed":
-        print("\nWARNING: the verification evidence is marked disputed.")
+        print()
+        print(
+            ui.panel(
+                [
+                    "The recorded evidence is disputed.",
+                    "Treat the details as contested until they are re-checked.",
+                ],
+                title="Disputed record",
+                width=width,
+                border_style="magenta",
+            )
+        )
 
 
-def _print_detail_field(label: str, value: Any, width: int = 24) -> None:
+def _print_detail_field(
+    label: str,
+    value: Any,
+    *,
+    width: int,
+    label_width: int = 22,
+    style: str = "",
+) -> None:
+    current = ui.theme()
     text = "" if value is None else str(value)
-    lines = text.splitlines() or [""]
-    prefix = f"{label + ':':<{width}}"
-    print(f"{prefix} {lines[0] if lines[0] else '-'}")
-    for line in lines[1:]:
-        print(f"{'':<{width}} {line}")
+    if not text.strip():
+        text = "-"
+        style = "dim"
+    available = width - label_width - 1
+    if available < 24:
+        print(current.dim(label))
+        for line in ui.wrap_text(text, max(16, width - 2)):
+            content = current.paint(line, style) if style else line
+            print(f"  {content}")
+        return
+    lines = ui.wrap_text(text, available)
+    prefix = current.dim(f"{label:<{label_width}}")
+    for index, line in enumerate(lines):
+        content = current.paint(line, style) if style else line
+        if index == 0:
+            print(f"{prefix} {content}")
+        else:
+            print(f"{'':<{label_width}} {content}")
 
 
 def _show_resource(
@@ -244,49 +335,142 @@ def _show_resource(
         )
         return EXIT_OK
 
-    print(f"BANSOS resource #{resource.id}")
-    print("=" * 32)
-    _print_detail_field(
-        "Name",
-        resource.name,
+    current = ui.theme()
+    width = current.total_width(100)
+    subtitle = (
+        f"{resource.provider} {current.dot} {resource.category} "
+        f"{current.dot} {resource.offer_type}"
     )
-    _print_detail_field("Provider", resource.provider)
+    header = [
+        ui.Cell(resource.name, "bold"),
+        subtitle,
+        ui.state_cell(state.code, state.label),
+    ]
+    print(
+        ui.panel(
+            header,
+            title=f"BANSOS {current.dot} Resource #{resource.id}",
+            width=width,
+        )
+    )
+    _print_verification_warning(state, width=width)
+
+    print()
+    print(ui.rule("Overview", width=width))
+    _print_detail_field("Provider", resource.provider, width=width)
+    category_label = models.CATEGORY_LABELS.get(resource.category, "unknown")
     _print_detail_field(
         "Category",
-        f"{resource.category} ({models.CATEGORY_LABELS.get(resource.category, 'unknown')})",
+        f"{resource.category} ({category_label})",
+        width=width,
     )
-    _print_detail_field("Offer type", resource.offer_type)
-    _print_detail_field("Payment required", resource.payment_method_required)
-    _print_detail_field("Country availability", resource.country_availability)
-    _print_detail_field("Description", resource.description)
-    _print_detail_field("Pricing notes", resource.pricing_notes)
-    _print_detail_field("Included limits", resource.included_limits)
-    _print_detail_field("Eligibility", resource.eligibility_requirements)
-    _print_detail_field("Source URL", resource.source_url)
-    _print_detail_field("Official terms URL", resource.official_terms_url)
-    _print_detail_field("First seen", resource.first_seen_at)
-    _print_detail_field("Last verified", resource.last_verified_at or "never")
-    _print_detail_field("Expiration", resource.expiration_at or "none recorded")
-    _print_detail_field("Verification status", resource.verification_status)
-    _print_detail_field("Research state", f"{state.label} - {state.detail}")
-    _print_detail_field("Verification evidence", resource.verification_evidence)
-    _print_detail_field("Research notes", resource.notes)
-    _print_detail_field("Created", resource.created_at)
-    _print_detail_field("Updated", resource.updated_at)
+    _print_detail_field("Offer type", resource.offer_type, width=width)
+    _print_detail_field(
+        "Payment required", resource.payment_method_required, width=width
+    )
+    _print_detail_field(
+        "Country availability", resource.country_availability, width=width
+    )
 
-    _print_verification_warning(resource, state)
+    print()
+    print(ui.rule("Offer details", width=width))
+    _print_detail_field("Description", resource.description, width=width)
+    _print_detail_field("Pricing notes", resource.pricing_notes, width=width)
+    _print_detail_field("Included limits", resource.included_limits, width=width)
+    _print_detail_field("Eligibility", resource.eligibility_requirements, width=width)
 
+    print()
+    print(ui.rule("Research", width=width))
+    _print_detail_field(
+        "Source URL", resource.source_url, width=width, style="blue"
+    )
+    _print_detail_field(
+        "Official terms URL",
+        resource.official_terms_url or "none recorded",
+        width=width,
+        style="blue" if resource.official_terms_url else "dim",
+    )
+    _print_detail_field("First seen", resource.first_seen_at, width=width)
+    _print_detail_field(
+        "Last verified", resource.last_verified_at or "never", width=width
+    )
+    _print_detail_field(
+        "Expiration", resource.expiration_at or "none recorded", width=width
+    )
+    _print_detail_field(
+        "Verification status",
+        resource.verification_status,
+        width=width,
+        style=ui.state_style(resource.verification_status),
+    )
+    _print_detail_field(
+        "Research state",
+        f"{state.label} {current.dot} {state.detail}",
+        width=width,
+        style=ui.state_style(state.code),
+    )
+    _print_detail_field("Research notes", resource.notes, width=width)
+
+    print()
+    print(ui.rule("Verification evidence", width=width))
+    _print_detail_field(
+        "Evidence",
+        resource.verification_evidence or "none recorded",
+        width=width,
+    )
+
+    print()
+    print(ui.rule("Record", width=width))
+    _print_detail_field("Created", resource.created_at, width=width)
+    _print_detail_field("Updated", resource.updated_at, width=width)
+
+    print()
+    print(ui.rule("Verification history", width=width))
     if events:
-        print("\nVerification history:")
-        for event in events:
-            print(
-                f"- {event.checked_at}  {event.status.upper()}  "
-                f"(recorded {event.created_at})"
-            )
-            for line in event.evidence.splitlines():
-                print(f"    {line}")
+        if width >= 64:
+            columns = [
+                ui.Column("CHECKED", min_width=10),
+                ui.Column("STATUS", min_width=10),
+                ui.Column("RECORDED", min_width=18, flex=True),
+            ]
+            rows = [
+                [
+                    event.checked_at,
+                    ui.state_cell(event.status, event.status.upper()),
+                    event.created_at,
+                ]
+                for event in events
+            ]
+        else:
+            columns = [
+                ui.Column(
+                    "CHECKED", min_width=10, flex=True, wrap=True
+                ),
+                ui.Column("STATUS", min_width=10),
+            ]
+            rows = [
+                [
+                    f"{event.checked_at[:10]}\nrec {event.created_at[:10]}",
+                    ui.state_cell(event.status, event.status.upper()),
+                ]
+                for event in events
+            ]
+        print(ui.render_table(columns, rows, width=width))
+        earlier = events[1:]
+        if earlier:
+            print()
+            print(current.dim("Earlier evidence"))
+            for event in earlier:
+                print(
+                    current.bold(
+                        f"{event.checked_at} {current.dot} {event.status.upper()}"
+                    )
+                )
+                for line in ui.wrap_text(event.evidence, max(20, width - 2)):
+                    print(f"  {line}")
+                print()
     else:
-        print("\nVerification history: none")
+        print(current.dim("No verification events recorded."))
     return EXIT_OK
 
 
@@ -665,16 +849,27 @@ def build_parser() -> argparse.ArgumentParser:
 def _cmd_init(path: Path) -> int:
     database = db.Database(path)
     result = database.initialize()
+    current = ui.theme()
+    title = "BANSOS initialized" if result.created else "BANSOS ready"
+    lines = [
+        f"Path: {result.path}",
+        f"Schema version: {result.schema_version}",
+    ]
     if result.created:
-        print(f"Initialized BANSOS database at {result.path}")
-    else:
-        print(f"BANSOS database ready at {result.path}")
-    print(f"Schema version: {result.schema_version}")
+        lines.append("The database was created and is ready for research.")
     if result.applied_versions:
-        print(
+        lines.append(
             "Applied migration(s): "
             + ", ".join(str(version) for version in result.applied_versions)
         )
+    print(
+        ui.panel(
+            lines,
+            title=title,
+            width=current.total_width(100),
+            border_style="green" if result.created else "cyan",
+        )
+    )
     return EXIT_OK
 
 
@@ -732,10 +927,15 @@ def _collect_add_values(args: argparse.Namespace) -> dict[str, Any]:
 def _cmd_add(database: db.Database, args: argparse.Namespace) -> int:
     values = _collect_add_values(args)
     resource = database.add_resource(values)
-    print(f"Added resource #{resource.id}: {resource.name} ({resource.provider})")
     print(
-        "Recorded as unverified. After manual research, run "
-        f"'bansos verify {resource.id} --evidence ...'."
+        f"{ui.mark_ok()} Added resource #{resource.id}: "
+        f"{resource.name} ({resource.provider})"
+    )
+    print(
+        ui.theme().dim(
+            "Recorded as unverified. After manual research, run "
+            f"'bansos verify {resource.id} --evidence ...'."
+        )
     )
     return EXIT_OK
 
@@ -747,13 +947,12 @@ def _cmd_list(database: db.Database, args: argparse.Namespace) -> int:
         _print_json([resource.to_public_dict() for resource in resources])
         return EXIT_OK
     if not resources:
-        print("No resources found. Add one with 'bansos add'.")
+        print(ui.theme().dim("No resources found.") + " Add one with 'bansos add'.")
         return EXIT_OK
-    _print_resources(resources)
+    subtitle = f"{len(resources)} resource(s) shown"
     if limit is not None and len(resources) == limit:
-        print(
-            f"\nShowing up to {limit} record(s). Use --limit 0 to show all."
-        )
+        subtitle += f" {ui.theme().dot} limit {limit}; use --limit 0 for all"
+    _print_resources(resources, title="Catalog", subtitle=subtitle)
     return EXIT_OK
 
 
@@ -772,11 +971,31 @@ def _cmd_search(database: db.Database, args: argparse.Namespace) -> int:
         _print_json([resource.to_public_dict() for resource in resources])
         return EXIT_OK
     if not resources:
-        print(f"No resources matched {text!r}.")
+        print(f"{ui.mark_warn()} No resources matched {text!r}.")
         return EXIT_OK
-    print(f"Found {len(resources)} matching resource(s):\n")
-    _print_resources(resources)
+    _print_resources(
+        resources,
+        title="Search results",
+        subtitle=f'{len(resources)} match(es) for "{text}"',
+    )
     return EXIT_OK
+
+
+def _filter_subtitle(args: argparse.Namespace, count: int) -> str:
+    parts = []
+    if args.category:
+        parts.append(f"category={args.category}")
+    if args.offer_type:
+        parts.append(f"offer={args.offer_type}")
+    if args.eligibility:
+        parts.append(f"eligibility~{ui.shorten(args.eligibility, 28)}")
+    if args.verification_status:
+        parts.append(f"status={args.verification_status}")
+    if args.payment_method_required:
+        parts.append(f"payment={args.payment_method_required}")
+    if args.country:
+        parts.append(f"country~{ui.shorten(args.country, 24)}")
+    return f"{count} match(es) {ui.theme().dot} " + ", ".join(parts)
 
 
 def _cmd_filter(database: db.Database, args: argparse.Namespace) -> int:
@@ -800,10 +1019,13 @@ def _cmd_filter(database: db.Database, args: argparse.Namespace) -> int:
         _print_json([resource.to_public_dict() for resource in resources])
         return EXIT_OK
     if not resources:
-        print("No resources matched the filters.")
+        print(f"{ui.mark_warn()} No resources matched the filters.")
         return EXIT_OK
-    print(f"Found {len(resources)} matching resource(s):\n")
-    _print_resources(resources)
+    _print_resources(
+        resources,
+        title="Filtered catalog",
+        subtitle=_filter_subtitle(args, len(resources)),
+    )
     return EXIT_OK
 
 
@@ -828,7 +1050,7 @@ def _guided_edit(resource: models.Resource) -> dict[str, Any]:
     changes: dict[str, Any] = {}
     for field, label in _EDIT_PROMPTS:
         current = getattr(resource, field)
-        display = _shorten(current, 60) if current not in (None, "") else "-"
+        display = ui.shorten(current, 60) if current not in (None, "") else "-"
         clear_hint = (
             " (or 'none' to clear)"
             if field in {"official_terms_url", "expiration_at"}
@@ -862,8 +1084,15 @@ def _cmd_edit(database: db.Database, args: argparse.Namespace) -> int:
         print("No changes made.")
         return EXIT_OK
     updated = database.update_resource(resource.id, changes)
-    print(f"Updated resource #{updated.id}: {updated.name} ({updated.provider})")
-    print("Verification fields were not changed. Use 'bansos verify ID' for those.")
+    print(
+        f"{ui.mark_ok()} Updated resource #{updated.id}: "
+        f"{updated.name} ({updated.provider})"
+    )
+    print(
+        ui.theme().dim(
+            "Verification fields were not changed. Use 'bansos verify ID' for those."
+        )
+    )
     return EXIT_OK
 
 
@@ -884,7 +1113,7 @@ def _cmd_delete(database: db.Database, args: argparse.Namespace) -> int:
             print("Cancelled. Nothing was deleted.")
             return EXIT_CANCELLED
     deleted = database.delete_resource(resource.id)
-    print(f"Deleted resource #{deleted.id}: {deleted.name}")
+    print(f"{ui.mark_ok()} Deleted resource #{deleted.id}: {deleted.name}")
     return EXIT_OK
 
 
@@ -905,13 +1134,18 @@ def _cmd_verify(database: db.Database, args: argparse.Namespace) -> int:
         evidence,
         args.checked_at,
     )
+    status = ui.theme().paint(
+        event.status.upper(), f"{ui.state_style(event.status)} bold"
+    )
     print(
-        f"Recorded {event.status.upper()} verification for resource "
+        f"{ui.mark_ok()} Recorded {status} verification for resource "
         f"#{resource.id} on {event.checked_at}."
     )
     print(
-        "Manual evidence recorded. BANSOS did not fetch the URL or independently "
-        "confirm that the offer is available."
+        ui.theme().dim(
+            "Manual evidence recorded. BANSOS did not fetch the URL or independently "
+            "confirm that the offer is available."
+        )
     )
     return EXIT_OK
 
@@ -944,35 +1178,48 @@ def _cmd_stale(database: db.Database, args: argparse.Namespace) -> int:
             }
         )
         return EXIT_OK
+    current = ui.theme()
+    width = current.total_width(100)
     if not stale:
         print(
-            f"No resources need re-verification under the {args.days}-day threshold."
+            f"{ui.mark_ok()} No resources need re-verification under the "
+            f"{args.days}-day threshold."
         )
         return EXIT_OK
-    print(
-        f"{len(stale)} resource(s) need re-verification "
-        f"({args.days}-day threshold):\n"
+    print(ui.rule("Re-verification queue", width=width))
+    _print_wrapped(
+        f"{len(stale)} record(s) {current.dot} {args.days}-day threshold",
+        width=width,
     )
     rows = []
     for resource in selected:
         state = states[resource.id]
-        rows.append(
-            [
-                resource.id,
-                resource.name,
-                resource.provider,
-                (resource.last_verified_at or "never")[:10],
-                f"{state.label}: {state.detail}",
-            ]
+        checked = (resource.last_verified_at or "never")[:10]
+        detail = (
+            f"{resource.name}\n"
+            f"{current.arrow} {resource.provider} {current.dot} {checked} "
+            f"{current.dot} {state.detail}"
         )
-    _print_table(
-        ("ID", "NAME", "PROVIDER", "CHECKED", "REASON"),
-        rows,
-        (4, 28, 20, 10, 38),
+        rows.append([resource.id, ui.state_cell(state.code, state.label), detail])
+    columns = [
+        ui.Column("ID", align="right", min_width=3),
+        ui.Column("STATE", min_width=10),
+        ui.Column("NAME", min_width=12, max_width=70, flex=True, wrap=True),
+    ]
+    print(
+        ui.render_table(
+            columns,
+            rows,
+            width=width,
+            row_separator=True,
+        )
     )
+    print(ui.state_legend(width))
     if limit is not None and len(stale) > limit:
         print(
-            f"\nShowing {limit} of {len(stale)} record(s). Use --limit 0 for all."
+            current.dim(
+                f"Showing {limit} of {len(stale)} record(s). Use --limit 0 for all."
+            )
         )
     return EXIT_OK
 
@@ -983,26 +1230,117 @@ def _cmd_stats(database: db.Database, args: argparse.Namespace) -> int:
         _print_json(data)
         return EXIT_OK
 
-    print("BANSOS statistics")
-    print("=================")
-    print(f"Database generated at: {data['generated_at']}")
-    print(f"Total resources: {data['total']}")
-    print(
-        f"Needs re-verification (>{data['stale_days']} days, never verified, "
-        f"stale, expired, or disputed): {data['needs_reverification']}"
+    current = ui.theme()
+    width = current.total_width(110)
+    total = int(data["total"])
+    statuses = data["by_verification_status"]
+    verified = int(statuses.get("verified", 0))
+    needs_review = int(data["needs_reverification"])
+    evidence = int(data["with_verification_evidence"])
+    verified_pct = (100.0 * verified / total) if total else 0.0
+    evidence_pct = (100.0 * evidence / total) if total else 0.0
+
+    print(current.paint("BANSOS", "cyan bold") + " " + current.bold("CATALOG"))
+    _print_wrapped(
+        f"Generated {data['generated_at']} {current.dot} {total} resources",
+        width=width,
     )
-    print(f"Date-expired records: {data['date_expired']}")
-    print(f"Records with verification evidence: {data['with_verification_evidence']}")
+    print()
+    print(
+        ui.metric_table(
+            [
+                ("Resources", str(total)),
+                ("Verified", f"{verified} {current.dot} {verified_pct:.0f}%"),
+                ("Needs review", str(needs_review)),
+                ("Evidence", f"{evidence} {current.dot} {evidence_pct:.0f}%"),
+            ],
+            width=width,
+        )
+    )
 
-    def section(title: str, values: Mapping[str, int]) -> None:
-        print(f"\n{title}:")
-        for name, count in values.items():
-            print(f"  {name:<28} {count}")
+    print()
+    print(ui.rule("Research status", width=width))
+    segments = [
+        ui.Segment(
+            "verified",
+            verified,
+            "green",
+            current.bar_filled,
+        ),
+        ui.Segment(
+            "disputed",
+            int(statuses.get("disputed", 0)),
+            "magenta",
+            "▓" if current.unicode else "%",
+        ),
+        ui.Segment(
+            "stale",
+            int(statuses.get("stale", 0)),
+            "yellow",
+            "▒" if current.unicode else "=",
+        ),
+        ui.Segment(
+            "expired",
+            int(statuses.get("expired", 0)),
+            "red",
+            "░" if current.unicode else "x",
+        ),
+        ui.Segment(
+            "unverified",
+            int(statuses.get("unverified", 0)),
+            "cyan",
+            "·" if current.unicode else ".",
+        ),
+    ]
+    print(ui.stacked_bar(segments, min(48, max(20, width - 2))))
+    legend = ui.stacked_legend(segments, width)
+    if legend:
+        print(legend)
+    else:
+        _print_wrapped("No records yet.", width=width)
+    _print_wrapped(
+        f"Date-expired records: {data['date_expired']} {current.dot} "
+        f"stale threshold: {data['stale_days']} days",
+        width=width,
+    )
 
-    section("By category", data["by_category"])
-    section("By offer type", data["by_offer_type"])
-    section("By stored verification status", data["by_verification_status"])
-    section("By payment method requirement", data["by_payment_method_required"])
+    def chart(
+        title: str,
+        values: Mapping[str, int],
+        *,
+        fill_style: str = "cyan",
+        color_map: Optional[Mapping[str, str]] = None,
+    ) -> None:
+        print()
+        print(ui.rule(title, width=width))
+        ordered = sorted(values.items(), key=lambda item: (-item[1], item[0]))
+        print(
+            ui.bar_chart(
+                ordered,
+                total=total,
+                width=width,
+                fill_style=fill_style,
+                color_map=color_map,
+            )
+        )
+
+    chart("Categories", data["by_category"])
+    chart("Offer types", data["by_offer_type"], fill_style="blue")
+    chart(
+        "Verification status",
+        data["by_verification_status"],
+        color_map={code: ui.state_style(code) for code in models.VERIFICATION_STATUSES},
+    )
+    chart(
+        "Payment requirement",
+        data["by_payment_method_required"],
+        color_map={"yes": "green", "no": "cyan", "unknown": "yellow"},
+    )
+    print()
+    _print_wrapped(
+        "Tip: use 'bansos filter --status disputed' to focus on contested records.",
+        width=width,
+    )
     return EXIT_OK
 
 
@@ -1124,7 +1462,9 @@ def _cmd_export(database: db.Database, args: argparse.Namespace) -> int:
             f"output file already exists: {path}; use --force to overwrite"
         )
     _atomic_write(path, text)
-    print(f"Exported {len(records)} resource(s) to {path} ({fmt}).")
+    print(
+        f"{ui.mark_ok()} Exported {len(records)} resource(s) to {path} ({fmt})."
+    )
     return EXIT_OK
 
 
@@ -1175,11 +1515,11 @@ def _cmd_import(database: db.Database, args: argparse.Namespace) -> int:
     )
     prefix = "Dry run (no changes written)" if args.dry_run else "Import complete"
     print(
-        f"{prefix}: {result.inserted} inserted, {result.updated} updated, "
-        f"{result.skipped} skipped."
+        f"{ui.mark_ok()} {prefix}: {result.inserted} inserted, "
+        f"{result.updated} updated, {result.skipped} skipped."
     )
     if args.dry_run:
-        print("Rerun without --dry-run to apply these changes.")
+        print(ui.theme().dim("Rerun without --dry-run to apply these changes."))
     return EXIT_OK
 
 
@@ -1199,10 +1539,15 @@ def _cmd_seed(database: db.Database, args: argparse.Namespace) -> int:
             return EXIT_CANCELLED
     result = database.import_records(list(seed.DEMO_RESOURCES), on_duplicate="skip")
     print(
-        f"Seed complete: {result.inserted} inserted, {result.updated} updated, "
-        f"{result.skipped} skipped (already present)."
+        f"{ui.mark_ok()} Seed complete: {result.inserted} inserted, "
+        f"{result.updated} updated, {result.skipped} skipped (already present)."
     )
-    print("Demo records are fictional and unverified. Remove them with 'bansos delete ID --yes'.")
+    print(
+        ui.theme().dim(
+            "Demo records are fictional and unverified. "
+            "Remove them with 'bansos delete ID --yes'."
+        )
+    )
     return EXIT_OK
 
 
@@ -1214,6 +1559,7 @@ def _cmd_seed(database: db.Database, args: argparse.Namespace) -> int:
 def main(argv: Optional[Sequence[str]] = None) -> int:
     parser = build_parser()
     args = parser.parse_args(argv)
+    ui.configure()
     try:
         path = _resolve_db_path(args)
         if args.command == "init":
