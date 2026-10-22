@@ -165,6 +165,24 @@ class PresentationTests(unittest.TestCase):
         self.assertEqual(presentation.visible_width(painted), 5)
         self.assertEqual(presentation.strip_ansi(painted), "hello")
 
+    def test_colorize_help_paints_layout_without_changing_screen_text(self):
+        help_text = (
+            "usage: bansos [-h] COMMAND\n"
+            "\n"
+            "options:\n"
+            "  -h, --help  show this help message and exit\n"
+            "\n"
+            "Examples:\n"
+            "  bansos list\n"
+        )
+        self._set_theme(color=True)
+        colored = presentation.colorize_help(help_text)
+        self.assertIn("\x1b[", colored)
+        self.assertEqual(presentation.strip_ansi(colored), help_text)
+
+        self._set_theme(color=False)
+        self.assertEqual(presentation.colorize_help(help_text), help_text)
+
     def test_configure_respects_environment_overrides(self):
         with mock.patch.dict(
             os.environ,

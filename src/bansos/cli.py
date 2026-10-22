@@ -479,6 +479,20 @@ def _show_resource(
 # ---------------------------------------------------------------------------
 
 
+class _HelpParser(argparse.ArgumentParser):
+    """ArgumentParser whose help/usage/errors follow the BANSOS theme."""
+
+    def format_help(self) -> str:
+        return ui.colorize_help(super().format_help())
+
+    def format_usage(self) -> str:
+        return ui.colorize_help(super().format_usage())
+
+    def error(self, message: str) -> None:
+        self.print_usage(sys.stderr)
+        self.exit(EXIT_USAGE, f"{ui.mark_error()} error: {message}\n")
+
+
 def _add_db_after_command(parser: argparse.ArgumentParser) -> None:
     parser.add_argument(
         "--db",
@@ -532,7 +546,7 @@ def _add_resource_options(parser: argparse.ArgumentParser) -> None:
 
 
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(
+    parser = _HelpParser(
         prog=PROG,
         description=(
             "Local-first catalog for researching legitimately free technology "
@@ -563,7 +577,7 @@ def build_parser() -> argparse.ArgumentParser:
         "--version", action="version", version=f"%(prog)s {__version__}"
     )
     subparsers = parser.add_subparsers(
-        dest="command", required=True, title="commands", metavar="COMMAND"
+        dest="command", title="commands", metavar="COMMAND"
     )
 
     init_parser = subparsers.add_parser(
@@ -1560,6 +1574,9 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     parser = build_parser()
     args = parser.parse_args(argv)
     ui.configure()
+    if args.command is None:
+        sys.stdout.write(parser.format_help())
+        return EXIT_USAGE
     try:
         path = _resolve_db_path(args)
         if args.command == "init":

@@ -555,6 +555,42 @@ def state_legend(width: Optional[int] = None) -> str:
     return "\n".join(lines)
 
 
+_HELP_USAGE_RE = re.compile(r"^(usage:)(\s+)(\S+)(.*)$")
+_HELP_SECTION_RE = re.compile(r"^(\s*)([A-Za-z][\w /-]*):$")
+_HELP_FLAG_RE = re.compile(r"(?<![\w-])(--?[A-Za-z][\w-]*)")
+
+
+def colorize_help(text: str) -> str:
+    """Colour an already-laid-out argparse help block.
+
+    Colouring happens after argparse computes the layout, so ANSI codes cannot
+    disturb column alignment.
+    """
+
+    current = theme()
+    if not current.color:
+        return str(text)
+    lines: list[str] = []
+    for line in str(text).split("\n"):
+        usage = _HELP_USAGE_RE.match(line)
+        section = _HELP_SECTION_RE.match(line)
+        if usage:
+            line = (
+                current.paint(usage.group(1), "bold blue")
+                + usage.group(2)
+                + current.paint(usage.group(3), "bold")
+                + usage.group(4)
+            )
+        elif section:
+            line = section.group(1) + current.paint(section.group(2) + ":", "bold cyan")
+        elif line.lstrip().startswith("-"):
+            line = _HELP_FLAG_RE.sub(
+                lambda match: current.paint(match.group(1), "cyan"), line
+            )
+        lines.append(line)
+    return "\n".join(lines)
+
+
 def mark_ok() -> str:
     return theme().paint("✔" if theme().unicode else "+", "green bold")
 
