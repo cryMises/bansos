@@ -2,8 +2,8 @@
   "format": "bansos-resources",
   "format_version": 1,
   "schema_version": 1,
-  "exported_at": "2026-11-06T02:55:46Z",
-  "count": 156,
+  "exported_at": "2026-11-06T03:05:03Z",
+  "count": 157,
   "resources": [
     {
       "id": 1,
@@ -2304,6 +2304,29 @@
       "notes": "Researcher: AGENT. Accessed 2026-10-23 UTC. Official pricing page reviewed. The page says workspaces receive a free monthly compute allotment and does not state a payment-method requirement.",
       "created_at": "2026-11-06T01:34:40Z",
       "updated_at": "2026-11-06T01:34:40Z"
+    },
+    {
+      "id": 157,
+      "name": "ModelScope API Inference with Magicube Credits",
+      "provider": "ModelScope",
+      "category": "ai-apis",
+      "description": "ModelScope API Inference paid for with free Magicube credits earned through daily login and community activity; no cash purchase needed for the free allowance.",
+      "offer_type": "free_tier",
+      "pricing_notes": "Magicubes are free compute credits: daily login grants 200 Magicubes/day (short-term, valid for the current day only); linking an Alibaba Cloud account adds 50/day; one-time profile actions (verify email, write a bio, customize profile page) grant 50 long-term Magicubes each. Magicubes are redeemable for Civision inference, Civision training and API Inference.",
+      "included_limits": "API Inference costs about 0.5 Magicubes per call for lightweight models, about 1 per call for standard models and about 2 per call for flagship models — so a daily login alone covers roughly 200 standard-model calls per day. Short-term Magicubes expire after 24 hours; long-term Magicubes expire after 90 days. Deduction order is closest-to-expiring first.",
+      "eligibility_requirements": "ModelScope account with a verified email is required to use Magicubes. Linking an Alibaba Cloud account is optional and adds 50 Magicubes/day. Community-guideline violations can suspend rewards privileges.",
+      "payment_method_required": "unknown",
+      "country_availability": "Not stated on reviewed pages.",
+      "source_url": "https://www.modelscope.cn/docs/magicube/intro",
+      "official_terms_url": "",
+      "first_seen_at": "2026-11-06T00:00:00Z",
+      "last_verified_at": "2026-11-06T00:00:00Z",
+      "expiration_at": null,
+      "verification_status": "verified",
+      "verification_evidence": "Source: https://www.modelscope.cn/docs/magicube/intro. Accessed 2026-11-06 UTC. Observed: the Magicube Rewards Program offers free compute Magicubes redeemable for Civision inference, Civision training and API Inference. Daily login grants 200 Magicubes/day (short-term, valid the current day only); linking an Alibaba Cloud account adds 50/day; verifying email, writing a bio and customizing the profile page each grant 50 long-term Magicubes (one-time). API Inference costs about 0.5 Magicubes per call (lightweight), about 1 (standard) and about 2 (flagship). Short-term Magicubes expire after 24 hours, long-term after 90 days. Prerequisite is a personal profile with a verified email. Remaining uncertainty: API base URL and model list (API-Inference docs page timed out on fetch, not claimed); card requirement and commercial-use terms not stated.",
+      "notes": "Researcher: AGENT. Accessed 2026-11-06 UTC. Official source: ModelScope Magicube Rewards Program docs (page crawl dated 2026-11-05 23:32 UTC). Remaining uncertainty: API base URL and exact model list (the API-Inference docs page timed out on fetch and was not readable; not claimed here); card requirement not stated; commercial-use terms not stated; the older '2,000 calls/day' figure from secondary sources is superseded by the Magicube system and is not claimed.",
+      "created_at": "2026-11-06T03:02:18Z",
+      "updated_at": "2026-11-06T03:02:23Z"
     },
     {
       "id": 97,
