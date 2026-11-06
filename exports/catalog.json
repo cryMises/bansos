@@ -2,11 +2,11 @@
   "format": "bansos-resources",
   "format_version": 1,
   "schema_version": 1,
-  "exported_at": "2026-10-24T04:29:14Z",
-  "count": 146,
+  "exported_at": "2026-11-06T01:37:02Z",
+  "count": 148,
   "resources": [
     {
-      "id": 120,
+      "id": 1,
       "name": "Ably Free Package",
       "provider": "Ably",
       "category": "other",
@@ -25,11 +25,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://ably.com/pricing. Accessed 2026-10-23 UTC. Observed: the Free package is $0 and lists 200 concurrent connections, 500 messages/second and 6M messages/month; the comparison table lists 1-day message storage and a 64 KiB maximum message size for the first package tier. Standard is $29/month plus usage, Pro is $399/month plus usage, and Enterprise is custom.",
       "notes": "Researcher: AGENT. Accessed 2026-10-23 UTC. Official pricing page reviewed. Payment-method requirement for the free package was not stated.",
-      "created_at": "2026-10-23T11:36:31Z",
-      "updated_at": "2026-10-23T11:36:32Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 41,
+      "id": 2,
       "name": "Aiven Free PostgreSQL",
       "provider": "Aiven",
       "category": "databases-storage",
@@ -48,11 +48,11 @@
       "verification_status": "verified",
       "verification_evidence": "Sources: https://aiven.io/pricing and https://aiven.io/docs/platform/concepts/service-pricing. Accessed 2026-10-22 UTC. Observed: PostgreSQL Free is $0/month with 1 dedicated VM, 1 CPU, 1 GB RAM, 1 GB storage, limited clouds, no region choice, no integrations or connection pooling, and a single disaster-recovery backup. The docs state no credit card is required, free services have no time limit, and Aiven may power off inactive free services after notice.",
       "notes": "Researcher: SUBAGENT. Pricing page and official docs reviewed. The number of free services allowed per project and the exact region list were not stated; this record is scoped to PostgreSQL.",
-      "created_at": "2026-10-22T03:34:24Z",
-      "updated_at": "2026-10-22T03:34:24Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 98,
+      "id": 3,
       "name": "Akamai Cloud $100 Credit (formerly Linode)",
       "provider": "Akamai",
       "category": "vps-cloud",
@@ -71,11 +71,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://linode.com/lp/free-credit-100-5000. Accessed 2026-10-22 UTC. Observed: $100 credit for new customers, expiring 60 days after activation, valid for Compute, Object Storage, Block Storage and NodeBalancers with GPUs excluded and standard rates after the credit; a valid payment method is required. The Akamai promotion rules page confirms the 60-day expiry and the separate up-to-$5,000 business credit application.",
       "notes": "Researcher: SUBAGENT. Reviewed the $100 credit landing page and Akamai's promotion redemption rules. Remaining uncertainty: the landing page is marketing collateral and does not enumerate every eligible instance type beyond the stated exclusions.",
-      "created_at": "2026-10-22T03:35:15Z",
-      "updated_at": "2026-10-22T03:35:16Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 100,
+      "id": 4,
       "name": "Alibaba Cloud ECS Free Trial",
       "provider": "Alibaba Cloud",
       "category": "vps-cloud",
@@ -94,11 +94,11 @@
       "verification_status": "verified",
       "verification_evidence": "Sources: https://www.alibabacloud.com/help/en/user-center/product-overview/learn-about-free-trials and https://www.alibabacloud.com/help/en/ecs/getting-started/quick-start-for-linux-instances. Accessed 2026-10-22 UTC. Observed: the free-trial page (last updated Jul 01, 2026) states under Payment method requirements that a credit card, debit card or PayTM must be linked and that PayPal is not supported for free trials; the FAQ repeats that PayPal-only accounts must add a card, debit card or PayTM. The ECS quick-start only lists a credit card or PayPal as a generic tutorial prerequisite, not as a free-trial payment rule, so the payment-method conflict is resolved in favour of the free-trial rules page. ECS eligibility confirmed: no prior ECS or Simple Application Server purchase, bill or trial; one account per identity; resellers excluded. Limitation: the free-trial catalogue required login, so instance sizing could not be read.",
       "notes": "Researcher: SUBAGENT2. Sizing and per-region trial inventory remain unknown; not contradicted, just unpublished. Record describes a 3-month trial per the help pages.",
-      "created_at": "2026-10-22T03:35:17Z",
-      "updated_at": "2026-10-22T07:32:17Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 25,
+      "id": 5,
       "name": "Alibaba Cloud Model Studio Free Quota",
       "provider": "Alibaba Cloud",
       "category": "ai-apis",
@@ -117,11 +117,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://www.alibabacloud.com/help/en/model-studio/new-free-quota. Accessed 2026-10-22 UTC. Observed: first activation in Singapore grants a free quota; each eligible model typically has 1,000,000 tokens shared by input and output; validity is 90 days with no pause for inactivity; only real-time inference with International scope is covered; batch, fine-tuning, deployment, custom models, PAI-DSW, and OSS are excluded; account information must be completed; re-registering does not grant another quota. The page does not state a card requirement.",
       "notes": "Researcher: SUBAGENT. Reviewed the official free-quota page last updated 2026-10-16. The 1,000,000-token figure is described as typical rather than universal, and some models do not offer a free quota. Payment method is unknown because the page requires account information but does not mention a card. No separate terms page was reviewed.",
-      "created_at": "2026-10-22T03:34:11Z",
-      "updated_at": "2026-10-22T03:34:12Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 115,
+      "id": 6,
       "name": "Anthropic API New-User Credits",
       "provider": "Anthropic",
       "category": "ai-apis",
@@ -140,11 +140,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://platform.claude.com/docs/en/about-claude/pricing. Accessed 2026-10-22 UTC. Observed: the pricing FAQ answers that new users receive a small amount of free credits to test the API; no amount, expiry, payment-method requirement or regional restriction is stated, and all model pricing is per million tokens. The free code-execution hours are a paid-platform feature quota, not a free API tier.",
       "notes": "Researcher: SUBAGENT2. Credit amount unknown; no dollar value should be recorded. The code-execution tool allowance of 1,550 free hours per month is a paid-platform feature quota, not a free API tier.",
-      "created_at": "2026-10-22T07:35:58Z",
-      "updated_at": "2026-10-22T07:35:58Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 52,
+      "id": 7,
       "name": "AppVeyor Open Source Plan",
       "provider": "AppVeyor",
       "category": "dev-tools-ci",
@@ -163,11 +163,11 @@
       "verification_status": "verified",
       "verification_evidence": "Sources: https://www.appveyor.com/pricing/ and https://www.appveyor.com/terms-of-service/. Accessed 2026-10-22 UTC. Observed: the open-source plan is still free with unlimited public projects, 1 concurrent job, 5 self-hosted jobs and community support; paid Basic is $29/month, Pro $59/month, Premium $99/month, with additional concurrent jobs at $50/month. The FAQ repeats a 60-minute maximum build job execution time on all plans and says the 14-day trial needs no credit card. Terms require an account and requested information for the Free plan and payment information for subscription plans, so the open-source card requirement is not stated.",
       "notes": "Researcher: SUBAGENT3. Payment remains unknown: the no-card statement covers the 14-day trial, not the standing open-source plan, and terms require payment information only for subscription plans. Signup was not attempted.",
-      "created_at": "2026-10-22T03:34:31Z",
-      "updated_at": "2026-10-22T07:33:29Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 111,
+      "id": 8,
       "name": "Appwrite Cloud Free Plan",
       "provider": "Appwrite",
       "category": "app-deployment",
@@ -186,11 +186,11 @@
       "verification_status": "verified",
       "verification_evidence": "Sources: https://appwrite.io/docs/advanced/billing/free and https://appwrite.io/blog/post/introducing-appwrite-cloud-start-plan. Accessed 2026-10-22 UTC. Observed: the docs confirm a free plan at organization level, one organization and two projects per account, limits billed per period, no add-on purchases and console read-only behaviour when limits are exceeded; the September 2026 blog table lists free at 0 USD with 5 GB bandwidth, 2 GB storage, 750K executions, 75K MAU, no backups and community support. The pricing page comparison table is client-rendered and could not be read directly.",
       "notes": "Researcher: SUBAGENT2. Quotas were read from the billing docs and a September 2026 product blog because the pricing page comparison table is client-rendered and could not be read directly; re-check the table when it renders.",
-      "created_at": "2026-10-22T07:35:54Z",
-      "updated_at": "2026-10-22T07:35:55Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 125,
+      "id": 9,
       "name": "AssemblyAI Free Tier",
       "provider": "AssemblyAI",
       "category": "ai-apis",
@@ -209,11 +209,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://www.assemblyai.com/pricing. Accessed 2026-10-23 UTC. Observed: accounts can start with no credit card; the free tier includes up to 185 hours of pre-recorded transcription and up to 333 hours of streaming transcription. On the free plan, up to 5 new streaming connections can be opened per minute. The page did not state an expiration date or monthly reset for these allowances.",
       "notes": "Researcher: AGENT. Accessed 2026-10-23 UTC. Official pricing page reviewed. The current page states hour-based free allowances rather than a dollar credit; no expiration or monthly reset was stated.",
-      "created_at": "2026-10-23T11:36:36Z",
-      "updated_at": "2026-10-23T11:36:37Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 91,
+      "id": 10,
       "name": "Auth0 Free Plan",
       "provider": "Auth0 (Okta)",
       "category": "other",
@@ -232,11 +232,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://auth0.com/pricing. Accessed 2026-10-22 UTC. Observed: the Free plan is $0/month and states 'No credit card needed to sign up'; it lists up to 25,000 MAUs, 1 custom domain, 5 organizations, 1 enterprise connection, unlimited social connections, 1,000 M2M authentications and 3 admins; the feature comparison shows 1 tenant and 1-day log retention on Free; footnotes state custom domains require credit card verification. Paid tier starting prices are also listed.",
       "notes": "Researcher: SUBAGENT. payment_method_required is 'no' for signup, with the documented exception that a card is required for custom-domain verification. No country restriction was found.",
-      "created_at": "2026-10-22T03:35:09Z",
-      "updated_at": "2026-10-22T03:35:10Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 143,
+      "id": 11,
       "name": "Autodesk Education Plan",
       "provider": "Autodesk",
       "category": "education-benefits",
@@ -255,11 +255,11 @@
       "verification_status": "verified",
       "verification_evidence": "Sources: https://www.autodesk.com/support/account/education/students-educators/overview, https://www.autodesk.com/support/account/education/students-educators/eligibility, and https://www.autodesk.com/education/home. Accessed 2026-10-23 UTC through a text proxy because direct requests returned HTTP 403. Observed: the Education plan gives eligible students free one-year, single-user access to Autodesk software and services for educational purposes, renewable annually while eligible; includes current version plus up to three prior versions; installable on up to three devices; non-commercial use only; SheerID verifies enrollment, employment, or contractor status at a qualified educational institution; minimum age rules apply; training-center and retraining-course participants are not eligible. No country list or payment requirement was stated.",
       "notes": "Researcher: AGENT. Accessed 2026-10-23 UTC. Direct requests to Autodesk pages returned HTTP 403, so the official overview, eligibility, and education-home pages were reviewed through a text proxy. The plan is for educational use only, with SheerID verification and annual renewal. Country availability and payment-method requirement were not stated.",
-      "created_at": "2026-10-23T23:40:16Z",
-      "updated_at": "2026-10-23T23:40:16Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 106,
+      "id": 12,
       "name": "AwardSpace Free Hosting",
       "provider": "AwardSpace",
       "category": "web-hosting",
@@ -278,11 +278,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://www.awardspace.com/free-hosting/. Accessed 2026-10-22 UTC. Observed: free forever with no credit card; one domain plus three subdomains (up to four websites); 5 GB monthly traffic; PHP/MySQL; one-click WordPress, Joomla and Grav; ad-free; 99.9% uptime claim; paid shared hosting from a promotional $0.25/month. Disk storage is not stated on the page.",
       "notes": "Researcher: SUBAGENT. Reviewed the free-hosting page and terms of service. Remaining uncertainty: the disk quota and per-file limits are not published on the page reviewed.",
-      "created_at": "2026-10-22T03:35:23Z",
-      "updated_at": "2026-10-22T03:35:24Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 71,
+      "id": 13,
       "name": "AWS Educate",
       "provider": "Amazon Web Services",
       "category": "education-benefits",
@@ -301,11 +301,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://aws.amazon.com/education/awseducate/. Accessed 2026-10-22 UTC. Observed: the page headline offers to build cloud skills 'completely for free'; the benefits section states 'No credit card needed' and that learners as young as 13 can register with just an email address for free hands-on labs; job board access is limited to learners 18+. No lab quota, credit amount or course limit is published on this page, and no country restriction is stated.",
       "notes": "Researcher: SUBAGENT. Classified always_free rather than educational_benefit because the page explicitly says the program is open to any individual and is not gated on student status. No usage quota is documented, so included_limits is qualitative.",
-      "created_at": "2026-10-22T03:34:50Z",
-      "updated_at": "2026-10-22T03:34:51Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 95,
+      "id": 14,
       "name": "AWS Free Tier (Free Plan)",
       "provider": "Amazon Web Services",
       "category": "vps-cloud",
@@ -324,11 +324,11 @@
       "verification_status": "verified",
       "verification_evidence": "Sources: https://aws.amazon.com/free/, https://aws.amazon.com/free/terms/ and https://aws.amazon.com/free/free-tier-faqs/. Accessed 2026-10-22 UTC. Observed: the Free Tier page says up to 200 USD over 6 months and the account closes 6 months after opening or when credits run out. The terms say Free Tier Credits expire 12 months after account opening, while the Free Plan period ends at 6 months or on credit exhaustion. The FAQ reconciles the two: credits expire 6 months from creation while on the Free plan, remaining credits stay usable until 12 months after upgrading to Paid, and activity-earned credits expire 12 months after account creation. The 6-vs-12-month conflict is a Free-plan/Paid-plan difference, not a contradiction. FAQ Q4 states a payment method is not required for most new customers, though AWS may request one for identity verification. Free Plan cannot be extended; Organizations enrollment moves the account to Paid.",
       "notes": "Researcher: SUBAGENT2. Payment-method requirement is no with the caveat that AWS may request one for identity verification; no page guarantees card-free signup for every customer.",
-      "created_at": "2026-10-22T03:35:13Z",
-      "updated_at": "2026-10-22T07:32:18Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 70,
+      "id": 15,
       "name": "Azure for Students",
       "provider": "Microsoft",
       "category": "education-benefits",
@@ -347,11 +347,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://azure.microsoft.com/en-us/free/students/. Accessed 2026-10-22 UTC. Observed: the FAQ states Azure for Students is free with no credit card required and includes a $100 credit usable within 12 months on most Azure products; the account comparison lists 20+ services free for 12 months for new customers and 65+ always-free services; the FAQ limits signups to one account per person and describes use for education or teaching, non-commercial research, or software design/development/testing/demonstration. The page does not state country restrictions, and no offer-specific terms page was reviewed.",
       "notes": "Researcher: SUBAGENT. Offer page and FAQ read directly. official_terms_url left empty because no separate terms page was opened. Region availability and any nationality restriction remain unknown.",
-      "created_at": "2026-10-22T03:34:49Z",
-      "updated_at": "2026-10-22T03:34:50Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 112,
+      "id": 16,
       "name": "Back4App Free Plan",
       "provider": "Back4App",
       "category": "app-deployment",
@@ -370,11 +370,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://www.back4app.com/pricing/backend-as-a-service. Accessed 2026-10-22 UTC. Observed: the free column lists 25K requests per month, 250 MB data storage, 1 GB transfer, 1 GB file storage, 1 app, 1 Cloud Code Job, USA region and community support, and the page states no credit card required; the FAQ says up to five projects on the free tier, contradicting the 1 app per subscription figure. Backup retention and data recovery are blank for the free plan.",
       "notes": "Researcher: SUBAGENT2. The FAQ statement of up to five projects conflicts with the table value of 1 app per subscription, so the project allowance is unclear. No official terms URL was reviewed; the site links a terms PDF.",
-      "created_at": "2026-10-22T07:35:55Z",
-      "updated_at": "2026-10-22T07:35:56Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 44,
+      "id": 17,
       "name": "Backblaze B2 Free Allowance (10 GB)",
       "provider": "Backblaze",
       "category": "databases-storage",
@@ -393,11 +393,11 @@
       "verification_status": "verified",
       "verification_evidence": "Sources: https://www.backblaze.com/cloud-storage/pricing and https://www.backblaze.com/sign-up/cloud-storage?referrer=pricing. Accessed 2026-10-22 UTC. Observed: the first 10 GB storage is always free, egress is free up to 3x average monthly storage, standard storage is $6.95/TB/month, and there are no minimum file size or duration fees; the sign-up page says no credit card required.",
       "notes": "Researcher: SUBAGENT. Pricing and sign-up pages reviewed. The free-account treatment of API calls and region/versioning details were not fully stated. This is a usage allowance rather than a separately named plan.",
-      "created_at": "2026-10-22T03:34:26Z",
-      "updated_at": "2026-10-22T03:34:26Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 90,
+      "id": 18,
       "name": "Better Stack Free Tier",
       "provider": "Better Stack",
       "category": "other",
@@ -416,11 +416,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://betterstack.com/pricing. Accessed 2026-10-22 UTC. Observed: the Free Tier section is headed 'Free for personal projects ($0/month)' and lists 10 monitors and heartbeats, 1 status page, Slack and email alerts, 100,000 exceptions per month, 5,000 session replays, 3 GB logs and 3 GB traces retained for 3 days, 30 GB metrics and 3 GB web events retained for 3 days. The page does not state a payment method or country restriction.",
       "notes": "Researcher: SUBAGENT. The free tier spans several products, so included_limits keeps each quota in its own unit. Payment method is not stated for the free tier.",
-      "created_at": "2026-10-22T03:35:08Z",
-      "updated_at": "2026-10-22T03:35:09Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 122,
+      "id": 19,
       "name": "Bitbucket Free Plan",
       "provider": "Atlassian",
       "category": "dev-tools-ci",
@@ -439,11 +439,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://www.atlassian.com/software/bitbucket/pricing and https://support.atlassian.com/bitbucket-cloud/docs/manage-your-plan-and-billing/. Accessed 2026-10-23 UTC. Observed: Bitbucket is free forever for up to 5 users with unlimited public and private repositories, 1 GB LFS storage and 50 build minutes. The support page lists a 2 GB repository soft limit and a 4 GB hard limit. Standard is $3.65/user/month and Premium is $8/user/month. The reviewed pages did not state whether a payment method is required for the free plan.",
       "notes": "Researcher: AGENT. Accessed 2026-10-23 UTC. Official pricing page and Atlassian support billing page reviewed. Payment-method requirement for the free plan was not stated.",
-      "created_at": "2026-10-23T11:36:33Z",
-      "updated_at": "2026-10-23T11:37:51Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 128,
+      "id": 20,
       "name": "Brevo Free Plan",
       "provider": "Brevo",
       "category": "other",
@@ -462,11 +462,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://www.brevo.com/pricing/ and https://help.brevo.com/hc/en-us/articles/208580669-FAQs-What-are-the-limits-of-the-Free-plan. Accessed 2026-10-23 UTC. Observed: the Free plan has no time limit and needs no credit card; it allows 300 email sends per day, stores up to 100,000 contacts, allows up to 2,000 unique contacts to enter active automations, and permits only one user (the account owner). The FAQ also lists basic statistics, 50 open deals, 1 pipeline, 1 connected calendar, 1 connected inbox and 1 currency.",
       "notes": "Researcher: AGENT. Accessed 2026-10-23 UTC. Official pricing page and official help-center FAQ reviewed. The FAQ confirms the 300/day limit, 100,000-contact storage, 2,000 automation entries and one-user limit.",
-      "created_at": "2026-10-23T11:36:39Z",
-      "updated_at": "2026-10-23T11:36:40Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 82,
+      "id": 21,
       "name": "BrowserStack Open Source Program",
       "provider": "BrowserStack",
       "category": "open-source-services",
@@ -485,11 +485,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://www.browserstack.com/open-source. Accessed 2026-10-22 UTC. Observed: the program offers lifetime access for the duration of the project, all products including Live, Automate and Percy, unlimited testing on 3,500+ browsers and devices, 5 users and 5 parallels. The signup form asks for the project URL; no OSI license requirement, review criteria or approval process is stated on the page. BrowserStack's general Terms at https://www.browserstack.com/terms state the services are not offered in specific OFAC-sanctioned regions. Payment-method requirement is not stated.",
       "notes": "Researcher: SUBAGENT. Read the program page and the general Terms. Remaining uncertainty: eligibility criteria beyond being an open-source project, and payment-method requirement.",
-      "created_at": "2026-10-22T03:35:01Z",
-      "updated_at": "2026-10-22T03:35:01Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 49,
+      "id": 22,
       "name": "Buildkite Free Plan",
       "provider": "Buildkite",
       "category": "dev-tools-ci",
@@ -508,11 +508,11 @@
       "verification_status": "verified",
       "verification_evidence": "Sources: https://buildkite.com/pricing and https://buildkite.com/about/legal/terms-of-service/. Accessed 2026-10-22 UTC. Observed: the Free plan is still $0 with no credit card required for solo developers and small teams, up to 5 users, 10 concurrent jobs, 2,000 Linux vCPU minutes/month, 250k test executions/month, 50 GB/month artifact storage, 250 GB/month downloads, 30-day retention and community support. A separate 30-day all-access trial is advertised. No country restriction is stated.",
       "notes": "Researcher: SUBAGENT3. Reviewed page is the standing Free plan; overage or hard-stop behaviour at the caps is not stated. Terms page last updated July 2026.",
-      "created_at": "2026-10-22T03:34:29Z",
-      "updated_at": "2026-10-22T07:33:29Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 107,
+      "id": 23,
       "name": "ByetHost Free Hosting",
       "provider": "ByetHost",
       "category": "web-hosting",
@@ -531,11 +531,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://byet.host/. Accessed 2026-10-22 UTC. Observed: free hosting at $0 with no expiration, 5 GB NVMe storage, unlimited bandwidth, one free subdomain plus custom domains, PHP 8.3, MySQL 8, 400+ one-click apps, free SSL and no forced ads; premium NVMe hosting from $56.78/year; no credit card is required for the free plan.",
       "notes": "Researcher: SUBAGENT. Reviewed the homepage and terms of service. Remaining uncertainty: inode, process and daily-hit limits are not stated on the reviewed pages.",
-      "created_at": "2026-10-22T03:35:24Z",
-      "updated_at": "2026-10-22T03:35:25Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 144,
+      "id": 24,
       "name": "Byteful Free Trial Proxies",
       "provider": "Byteful",
       "category": "other",
@@ -554,11 +554,11 @@
       "verification_status": "verified",
       "verification_evidence": "Sources: https://byteful.com/proxy-service/free-trial-proxies and https://byteful.com/terms-and-conditions. Accessed 2026-10-24 UTC. Observed on the free-trial page: a 1 GB residential proxy trial described as using the same residential pool as paid plans; 35M+ residential IPs in 195+ countries; HTTP and SOCKS5; sticky sessions up to 24 hours; the trial ends when 1 GB is consumed; KYC identity verification is required to unlock it and no credit card is needed. The page explicitly distinguishes residential from datacenter trials, so the offer is residential. The terms page contains no trial-specific billing terms and states that services are prepaid and access follows payment confirmation, which conflicts with the trial page's no-card statement; the signup flow was not tested. Limitations: no account was created, no proxy was used, country eligibility and KYC availability were not stated, and current availability was not independently confirmed.",
       "notes": "Researcher: AGENT. Accessed 2026-10-24 UTC. Reviewed the official free-trial page and terms page. The offer is explicitly residential (household IPs), 1 GB, KYC-gated, and the trial page says no card is required. The general Terms and Conditions state that services are prepaid and access is granted after payment is confirmed; the specific trial page states the opposite for this free trial, and the signup flow was not tested, so the practical payment requirement remains unconfirmed. The terms also prohibit using the service to catalogue or index proxy infrastructure, which concerns use of the proxies rather than recording this offer. Not tested: signup/KYC flow, proxy performance, country eligibility, and whether KYC is available in every region. Secondary review sites were not used as evidence.",
-      "created_at": "2026-10-24T03:57:31Z",
-      "updated_at": "2026-10-24T03:58:08Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 75,
+      "id": 25,
       "name": "Canva for Education",
       "provider": "Canva",
       "category": "education-benefits",
@@ -577,8 +577,8 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://www.canva.com/education/eligibility-guidelines/. Accessed 2026-10-22 UTC. Observed: the page states Canva Education is free for eligible teachers and students, is available all over the world and is not restricted to any country; it lists the qualifying K-12 roles and school types; it explicitly excludes higher education institutions and staff and college or university students; it states users re-verify credentials every 3 years and that applications with approved documents are reviewed within 48 hours. The page does not list feature, seat or storage quotas and does not state a payment method.",
       "notes": "Researcher: SUBAGENT. This record deliberately covers K-12 only; Canva's higher education offering is a separate paid product. No quota information is published on the eligibility page.",
-      "created_at": "2026-10-22T03:34:54Z",
-      "updated_at": "2026-10-22T03:34:55Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
       "id": 26,
@@ -600,11 +600,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://inference-docs.cerebras.ai/support/rate-limits. Accessed 2026-10-22 UTC. Observed: new accounts receive $5 in free credits after adding a verified payment method; credits expire 30 days after grant; there is no permanently free tier; Free Trial limits for gpt-oss-120b and qwen-3.8-27b are 5 RPM, 30K uncached TPM, 90K total TPM, 1M TPH, and 1M TPD. The page does not state country availability.",
       "notes": "Researcher: SUBAGENT. Reviewed the official rate-limit page. This is a time- and credit-bounded promotional credit, not a recurring free tier, and payment method verification is required to activate API access. No separate terms page was reviewed.",
-      "created_at": "2026-10-22T03:34:12Z",
-      "updated_at": "2026-10-22T03:34:12Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 47,
+      "id": 27,
       "name": "CircleCI Free Plan",
       "provider": "CircleCI",
       "category": "dev-tools-ci",
@@ -623,11 +623,11 @@
       "verification_status": "verified",
       "verification_evidence": "Sources: https://circleci.com/pricing/ and https://circleci.com/legal/terms-of-use/. Accessed 2026-10-22 UTC. Observed: the Free plan is still $0/month with no credit card required, 6,000 build minutes per month on a small Docker resource class, up to 5 active users, 30,000 free credits/month, 2 GB storage and 1,000 Smarter Testing test atoms/month. Performance starts at $15/month. No country restriction is stated.",
       "notes": "Researcher: SUBAGENT3. Country availability and credit-exhaustion behaviour are not stated on the reviewed pages.",
-      "created_at": "2026-10-22T03:34:28Z",
-      "updated_at": "2026-10-22T07:33:28Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 76,
+      "id": 28,
       "name": "Cisco Networking Academy",
       "provider": "Cisco",
       "category": "education-benefits",
@@ -646,11 +646,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://www.cisco.com/site/us/en/learn/training-certifications/training/netacad/index.html. Accessed 2026-10-22 UTC. Observed: the page headline says 'Build your skills today. It's free.' and describes free, self-paced online courses; it lists nine courses with durations ranging from 2h to 70h and two guided career paths. No eligibility restriction, country restriction, payment-method statement or certificate quota is given.",
       "notes": "Researcher: SUBAGENT. The netacad.com root page returned no content to the fetch tool, so this record uses Cisco's own overview page on cisco.com as the source. Course durations are as printed; certificate terms were not reviewed.",
-      "created_at": "2026-10-22T03:34:55Z",
-      "updated_at": "2026-10-22T03:34:56Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 92,
+      "id": 29,
       "name": "Clerk Hobby Plan",
       "provider": "Clerk",
       "category": "other",
@@ -669,11 +669,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://clerk.com/pricing. Accessed 2026-10-22 UTC. Observed: the page states 'No credit card required to start' and lists the Hobby plan as Free with up to 3 dashboard seats, unlimited applications, 50,000 MRUs per app, up to 5 impersonations, custom domain, fixed 7-day session lifetime and 1-day application log retention; machine authentication limits are 1,000 API key creations and 100,000 verifications per month plus 2,500 M2M token creations and 100,000 verifications per month; B2B without add-ons includes 100 MROs per app and 20 members per organization. Paid tier prices are also listed.",
       "notes": "Researcher: SUBAGENT. Clerk bills on monthly retained users rather than monthly active users, and that definition is preserved in included_limits. No country restriction was found.",
-      "created_at": "2026-10-22T03:35:11Z",
-      "updated_at": "2026-10-22T03:35:11Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 5,
+      "id": 30,
       "name": "Cloudflare DNS Free Plan",
       "provider": "Cloudflare",
       "category": "domains-dns",
@@ -692,11 +692,11 @@
       "verification_status": "verified",
       "verification_evidence": "Sources: https://developers.cloudflare.com/dns/manage-dns-records/, https://www.cloudflare.com/plans/network-cdn/ and https://www.cloudflare.com/terms/. Accessed 2026-10-22 UTC. Observed: the DNS records page (updated 2026-10-06) gives per-zone record quotas — Free zones created before 2024-09-01 UTC: 1,000 records, on or after: 200; Pro and Business 3,500 — and states records created by other Cloudflare services count toward the quota. The plans page lists Free at $0 including DNS. The self-serve subscription agreement ties a credit-card payment method to Paid Services and describes Free Services as provided free of charge, so payment is recorded as no; no explicit no-card sentence exists and signup was not attempted.",
       "notes": "Researcher: AGENT. Accessed 2026-10-22 UTC. DNS records documentation and Cloudflare plans page reviewed. The record-quota page was located after earlier 404s; quotas above are quoted from it. DNSSEC, secondary DNS and other features were not assessed. Payment-method requirement recorded as unknown.",
-      "created_at": "2026-10-22T01:05:39Z",
-      "updated_at": "2026-10-22T07:33:23Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 4,
+      "id": 31,
       "name": "Cloudflare Pages Free Plan",
       "provider": "Cloudflare",
       "category": "web-hosting",
@@ -715,11 +715,11 @@
       "verification_status": "verified",
       "verification_evidence": "Sources: https://developers.cloudflare.com/pages/platform/limits/ and https://www.cloudflare.com/plans/. Accessed 2026-10-22 UTC. Observed: limits page (updated 2026-09-05) still lists Free at 1 build at a time, 500 builds/month, 100 custom domains per project, 20,000 files per site, 25 MiB max file size, 100 projects per account, 2,000 static and 100 dynamic redirects, 20-minute build timeout; plans pages list Free at $0. The subscription agreement limits the card requirement to Paid Services. Country availability not stated.",
       "notes": "Researcher: AGENT. Accessed 2026-10-22 UTC. Pages overview and limits documentation reviewed. Build and file quotas are from the limits page. Payment-method requirement was not stated and is recorded as unknown. Functions and other platform features may have separate limits.",
-      "created_at": "2026-10-22T01:05:39Z",
-      "updated_at": "2026-10-22T07:33:24Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 10,
+      "id": 32,
       "name": "Cloudflare R2 Free Tier",
       "provider": "Cloudflare",
       "category": "databases-storage",
@@ -738,11 +738,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://developers.cloudflare.com/r2/pricing/. Accessed 2026-10-22 UTC. Observed: free tier includes 10 GB-month of Standard storage, 1 million Class A operations and 10 million Class B operations per month, with zero egress fees; the free allowance applies to Standard storage only, not Infrequent Access. The pricing page indicates a payment method is required to enable R2. Limitation: operation definitions and overage rates were not modelled beyond the free allowance.",
       "notes": "Researcher: AGENT. Accessed 2026-10-22 UTC. Official R2 pricing page reviewed. Free-tier operation counts and storage allowance were read directly. Data-transfer pricing was not modelled beyond the stated zero egress rate.",
-      "created_at": "2026-10-22T01:05:57Z",
-      "updated_at": "2026-10-22T01:07:22Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 20,
+      "id": 33,
       "name": "Cloudflare Turnstile Free Plan",
       "provider": "Cloudflare",
       "category": "other",
@@ -761,11 +761,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://developers.cloudflare.com/turnstile/plans/. Accessed 2026-10-22 UTC. Observed: the page (updated 2026-08-14) still lists a Free plan with up to 20 widgets per account, 10 hostnames per widget, unlimited challenges, all widget types, 7-day analytics lookback, pre-clearance and WCAG 2.2 AAA, community support; ephemeral IDs and off-label branding remain Enterprise-only and Turnstile works without other Cloudflare services. No payment-method statement on the page; the subscription agreement ties a card to Paid Services.",
       "notes": "Researcher: AGENT. Accessed 2026-10-22 UTC. Official Turnstile plans page reviewed. Widget and hostname limits are from the plan comparison. Payment-method requirement was not stated and is recorded as unknown.",
-      "created_at": "2026-10-22T01:06:43Z",
-      "updated_at": "2026-10-22T07:33:24Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 24,
+      "id": 34,
       "name": "Cloudflare Workers AI Free Allocation",
       "provider": "Cloudflare",
       "category": "ai-apis",
@@ -784,11 +784,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://developers.cloudflare.com/workers-ai/platform/pricing/. Accessed 2026-10-22 UTC. Observed: Workers AI is included in the Free and Paid Workers plans; 10,000 Neurons per day are free and reset at 00:00 UTC; overage is $0.011 per 1,000 Neurons on Workers Paid. Named models including @cf/moonshotai/kimi-k2.6, @cf/zai-org/glm-5.2, and @cf/deepseek-ai/deepseek-v4.1-flash-1017 require a paid billing method or prepaid AI Gateway credits. Country availability and any card requirement for the free allocation were not stated.",
       "notes": "Researcher: SUBAGENT. Reviewed the official pricing page last updated 2026-10-20. The free allocation is measured in Neurons rather than tokens, so token-equivalent usage varies by model. Payment method is marked unknown because the page only says some models require paid billing and does not state whether Workers Free signup requires a card.",
-      "created_at": "2026-10-22T03:34:11Z",
-      "updated_at": "2026-10-22T03:34:11Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 13,
+      "id": 35,
       "name": "Cloudflare Workers Free Plan",
       "provider": "Cloudflare",
       "category": "app-deployment",
@@ -807,11 +807,11 @@
       "verification_status": "verified",
       "verification_evidence": "Sources: https://developers.cloudflare.com/workers/platform/pricing/ and https://developers.cloudflare.com/workers/platform/limits/. Accessed 2026-10-22 UTC. Observed: pricing (updated 2026-10-02) keeps Free at 100,000 requests/day, no charge for duration and 10 ms CPU per invocation; limits (updated 2026-10-12) keep Free at 128 MB memory, 100 Workers per account, 5 Cron Triggers, 50 subrequests per request and 64 MiB Worker size. Paid has a 5 USD/month minimum. The subscription agreement ties the card requirement to Paid Services; signup was not attempted.",
       "notes": "Researcher: AGENT. Accessed 2026-10-22 UTC. Official Workers pricing page reviewed. CPU limit is per invocation; wall-clock duration limits and subrequest limits are documented separately and were not recorded here. Payment-method requirement recorded as unknown.",
-      "created_at": "2026-10-22T01:06:14Z",
-      "updated_at": "2026-10-22T07:33:24Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 45,
+      "id": 36,
       "name": "Cloudinary Free Plan",
       "provider": "Cloudinary",
       "category": "databases-storage",
@@ -830,11 +830,11 @@
       "verification_status": "verified",
       "verification_evidence": "Sources: https://cloudinary.com/pricing and https://cloudinary.com/pricing/compare-plans. Accessed 2026-10-22 UTC. Observed: Free is $0, free forever, no credit card required, with 25 monthly credits shared across transformations, managed storage and bandwidth for 3 users on 1 account; 1 credit equals 1,000 transformations or 1 GB managed storage or 1 GB image bandwidth; free-plan file-size and API limits are listed; limits are described as soft.",
       "notes": "Researcher: SUBAGENT. Pricing and compare-plans pages reviewed. The 25 credits are a shared monthly pool, so the full 25 GB storage is available only if no credits are spent on transformations or bandwidth. Inactivity and retention beyond backup/revision tracking were not stated.",
-      "created_at": "2026-10-22T03:34:26Z",
-      "updated_at": "2026-10-22T03:34:26Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 68,
+      "id": 37,
       "name": "ClouDNS Free DNS",
       "provider": "ClouDNS",
       "category": "domains-dns",
@@ -853,11 +853,11 @@
       "verification_status": "verified",
       "verification_evidence": "Sources: https://www.cloudns.net/free-dns/ and https://www.cloudns.net/tos/. Accessed 2026-10-22 UTC. Observed: the free DNS block is still labelled free forever with 4 unicast DNS servers, 1 zone, 50 records, 500K queries/month, 1 mail forward and 1 Dynamic DNS hostname; Premium starts at $2.95/month. Terms of Service resolves at /tos/ and governs use of the site and services. No statement on payment method for the free plan; country availability not stated.",
       "notes": "Researcher: SUBAGENT3. Payment requirement remains unknown; the signup form was not submitted. The terms page resolves at /tos/ while /terms/ redirects to the homepage.",
-      "created_at": "2026-10-22T03:34:47Z",
-      "updated_at": "2026-10-22T07:33:25Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 117,
+      "id": 38,
       "name": "CockroachDB Cloud Trial",
       "provider": "Cockroach Labs",
       "category": "databases-storage",
@@ -876,11 +876,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://www.cockroachlabs.com/pricing/. Accessed 2026-10-23 UTC. Observed: every new Cloud organization gets a 30-day free trial with $400 in credit; no credit card is required to try Standard, while Mission Critical requires a card. The trial ends after 30 days or when the credit is used; clusters then pause for a 30-day grace period before deletion. Paid use after the trial requires a payment method.",
       "notes": "Researcher: AGENT. Accessed 2026-10-23 UTC. Official pricing page and FAQ reviewed. Payment requirement recorded for the Standard trial; paid use after the trial requires a payment method.",
-      "created_at": "2026-10-23T11:36:28Z",
-      "updated_at": "2026-10-23T11:36:29Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 118,
+      "id": 39,
       "name": "Codeberg Free FOSS Git Hosting",
       "provider": "Codeberg",
       "category": "open-source-services",
@@ -899,11 +899,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://codeberg.org/ and https://docs.codeberg.org/getting-started/faq/. Accessed 2026-10-23 UTC. Observed: Codeberg provides free Git hosting for free and open-source projects; the FAQ says there is no quota for valid use cases and lists review thresholds of 750 MiB for Git storage and 1.5 GiB for packages, LFS and attachments, plus up to 100 MB of private content for contributors. The FAQ says proprietary or private content outside FOSS use is not eligible.",
       "notes": "Researcher: AGENT. Accessed 2026-10-23 UTC. Codeberg homepage and official FAQ reviewed. The FAQ describes review thresholds rather than automated hard quotas; 'no quota for valid use-cases' is Codeberg's wording.",
-      "created_at": "2026-10-23T11:36:29Z",
-      "updated_at": "2026-10-23T11:36:30Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 17,
+      "id": 40,
       "name": "Codecov for Open Source",
       "provider": "Codecov",
       "category": "open-source-services",
@@ -922,11 +922,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://about.codecov.io/for/open-source/. Accessed 2026-10-22 UTC. Observed: the page states Codecov is a free tool for open source projects and will always be free for open source projects, with PR comments and coverage status checks. No numeric repository, user or upload quota was stated on the page. Limitation: retention periods, supported CI providers and private-repository pricing were not reviewed; payment-method requirement remains unknown. An earlier draft claim of unlimited public repositories, users and uploads was not supported by the page and was corrected.",
       "notes": "Researcher: AGENT. Accessed 2026-10-22 UTC. Official Codecov open-source page reviewed. The earlier draft claim of unlimited public repositories, users and uploads was not supported by the page text and was corrected. Retention periods, supported CI providers and private-repository pricing were not recorded. Payment-method requirement is unknown.",
-      "created_at": "2026-10-22T01:06:41Z",
-      "updated_at": "2026-10-22T01:07:56Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 22,
+      "id": 41,
       "name": "Cohere Trial API Keys",
       "provider": "Cohere",
       "category": "ai-apis",
@@ -945,11 +945,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://docs.cohere.com/docs/rate-limits. Accessed 2026-10-22 UTC. Observed: trial keys are free but limited to 1,000 API calls per month; chat trial limits are 20 requests/minute per model; embed 2,000 inputs/minute; rerank 10 requests/minute; audio transcriptions 5 requests/minute; tokenize 100 requests/minute. The page distinguishes trial/evaluation keys from paid production keys but does not state a payment-method requirement or country availability.",
       "notes": "Researcher: SUBAGENT. Reviewed the official rate-limit page. The linked pricing page was not used for per-token prices, and the terms page was not readable beyond its navigation, so no terms-specific claims are recorded. Payment-method requirement and geographic availability remain unknown.",
-      "created_at": "2026-10-22T03:34:08Z",
-      "updated_at": "2026-10-22T03:34:09Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 85,
+      "id": 42,
       "name": "Datadog for Open Source Projects",
       "provider": "Datadog",
       "category": "open-source-services",
@@ -968,11 +968,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://www.datadoghq.com/partner/open-source/. Accessed 2026-10-22 UTC. Observed: Datadog offers access at no cost, reviewed case by case, to its full cloud observability and security platform. Guidelines require a non-commercial project with an approved OSS license, at least one year of age, at least five regular contributors, at least two maintainers at different companies, and monitored infrastructure/apps that directly support the project. The number of hosts/compute units and telemetry events may be limited, but no numbers are published, and projects are expected to tell their community how Datadog is used. No payment-method or country requirement is stated.",
       "notes": "Researcher: SUBAGENT. Read the open-source program page. Remaining uncertainty: numeric host/telemetry limits and payment-method/country requirements are not stated.",
-      "created_at": "2026-10-22T03:35:03Z",
-      "updated_at": "2026-10-22T03:35:04Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 145,
+      "id": 43,
       "name": "Decodo Residential Proxy Free Trial",
       "provider": "Decodo",
       "category": "other",
@@ -991,11 +991,11 @@
       "verification_status": "verified",
       "verification_evidence": "Sources: https://decodo.com/proxies/residential-proxies and https://help.decodo.com/docs/trials. Accessed 2026-10-24 UTC. Observed: the residential product page offers a 3-day free trial with 100 MB and describes the pool as residential household IPs, distinct from datacenter proxies. The trials documentation states the trial covers Pay per GB options, requires card, PayPal, or Google Pay details, may show a $1 pre-authorization that is not a charge, activates the selected plan automatically after 3 days unless canceled, and excludes the 14-day money-back option. Trial availability is one per product and only for accounts that have not previously used that product. Google target access depends on the plan chosen for upgrade: 2GB-100GB include Google access; 250GB restricts it. Limitations: signup, payment authorization, and actual residential IP performance were not tested; country eligibility was not stated.",
       "notes": "Researcher: AGENT. Accessed 2026-10-24 UTC. Reviewed the official residential product page and the official trials documentation. Confirmed the trial is residential, 3 days/100 MB, requires payment details, and auto-activates the chosen paid plan if not canceled. Not tested: the signup flow, the $1 pre-authorization, Google target access, and country eligibility. Secondary sources were not used as evidence.",
-      "created_at": "2026-10-24T04:26:56Z",
-      "updated_at": "2026-10-24T04:27:45Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 124,
+      "id": 44,
       "name": "Deepgram $200 Free Credit",
       "provider": "Deepgram",
       "category": "ai-apis",
@@ -1014,11 +1014,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://deepgram.com/pricing. Accessed 2026-10-23 UTC. Observed: pay-as-you-go includes a $200 free credit with no expiration and no credit card required, then usage is billed at published rates. The page lists concurrency of up to 50 for REST speech-to-text, 150 for WSS speech-to-text, 5 for Deepgram Whisper Cloud and 45 for text-to-speech.",
       "notes": "Researcher: AGENT. Accessed 2026-10-23 UTC. Official pricing page reviewed. The page states the credit has no expiration; concurrency figures were recorded from the same page.",
-      "created_at": "2026-10-23T11:36:35Z",
-      "updated_at": "2026-10-23T11:36:36Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 84,
+      "id": 45,
       "name": "DeepSource Open Source Plan",
       "provider": "DeepSource",
       "category": "open-source-services",
@@ -1037,11 +1037,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://deepsource.com/pricing. Accessed 2026-10-22 UTC. Observed: the Open Source plan is free and the page states it always will be, with unlimited public repositories, unlimited team members, 1,000 PR reviews per month and 1,000 automated formatting runs per month. Private repositories are excluded; static analysis, SAST, IaC analysis and code coverage are included, while OSS vulnerability scanning and license compliance are not; AI Review and Autofix are pay-as-you-go. The Team plan is $24 per user per month. No OSI license requirement, approval process, payment-method requirement or country restriction is stated.",
       "notes": "Researcher: SUBAGENT. Read the pricing page. Remaining uncertainty: no OSI-specific eligibility rule is stated; payment-method and country requirements are not stated.",
-      "created_at": "2026-10-22T03:35:03Z",
-      "updated_at": "2026-10-22T03:35:03Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 31,
+      "id": 46,
       "name": "Deno Deploy Free Plan",
       "provider": "Deno",
       "category": "app-deployment",
@@ -1060,11 +1060,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://deno.com/deploy/pricing. Accessed 2026-10-22 UTC. Observed: Free is $0/month for personal use and smaller projects with 1M requests/month, 20 GiB egress, 5 custom domains, no wildcard subdomains, 10 active CPU hours, 150 GiB-hours memory, 10 GiB revision storage, 10 apps, 1 concurrent build, 15 builds/hour, 1 GiB KV storage, 1M KV reads, 500K KV writes, 1-day log and trace retention, 3 team members; sandboxes and volume storage excluded. Payment method is not stated.",
       "notes": "Researcher: SUBAGENT3. A site banner states Deno is joining Cloudflare; availability risk is not addressed on the pricing page. Payment method and country eligibility are not stated.",
-      "created_at": "2026-10-22T03:34:16Z",
-      "updated_at": "2026-10-22T07:33:20Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 60,
+      "id": 47,
       "name": "deSEC Free DNS Hosting",
       "provider": "deSEC",
       "category": "domains-dns",
@@ -1083,11 +1083,11 @@
       "verification_status": "verified",
       "verification_evidence": "Sources: https://desec.io/ and https://desec.io/terms/. Accessed 2026-10-22 UTC. Observed: the site describes a free DNS hosting service, free for everyone to use, built on open-source software; the Terms of Use list low-load expectations, deletion of stale dynamic DNS domains after warning, email-based registration and best-effort free service. The API quickstart shows account registration with email, password and captcha only, with no payment field, so payment is recorded as no. No paid tier, domain quota or country restriction is stated.",
       "notes": "Researcher: SUBAGENT3. Site body requires JavaScript; terms wording was read from the site client-side bundle and matches the /terms/ route. Registration is by email, password and captcha, with no payment field. No paid tier or country restriction stated.",
-      "created_at": "2026-10-22T03:34:41Z",
-      "updated_at": "2026-10-22T07:33:26Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 57,
+      "id": 48,
       "name": "Dewaweb .my.id Domain Registration",
       "provider": "Dewaweb",
       "category": "domains-dns",
@@ -1106,11 +1106,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://www.dewaweb.com/domain. Accessed 2026-10-22 UTC. Observed: the .my.id row lists Rp12,000 for a new domain and Rp25,000 for transfer/renewal; the special-document note covers .co.id, .net.id, .sch.id, and .ponpes.id, not .my.id. The page separately offers free .my.id/.web.id with annual Scout/Hunter hosting.",
       "notes": "Researcher: SUBAGENT. The standalone .my.id registration is paid; the free-domain-with-hosting promotion is conditional and was not treated as a free standalone domain. Remaining uncertainty: tax treatment and the duration of the Rp12,000 price. This is a paid registration offer; BANSOS has no paid-offer type, so offer_type is unknown.",
-      "created_at": "2026-10-22T03:34:37Z",
-      "updated_at": "2026-10-22T03:34:37Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 34,
+      "id": 49,
       "name": "DigitalOcean App Platform Free Tier",
       "provider": "DigitalOcean",
       "category": "app-deployment",
@@ -1129,11 +1129,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://www.digitalocean.com/pricing/app-platform. Accessed 2026-10-22 UTC. Observed: Free Tier starts at $0/month and includes 3 apps with static sites, 1 GiB data transfer allowance per app, GitHub/GitLab deployment, automatic HTTPS, custom domains, global CDN, DDoS mitigation, and unlimited team members. The container pricing table lists 'Free tier' with 1 GiB transfer and no autoscaling.",
       "notes": "Researcher: SUBAGENT. Pricing page reviewed. Whether a card is required and regional restrictions were not stated.",
-      "created_at": "2026-10-22T03:34:18Z",
-      "updated_at": "2026-10-22T03:34:19Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 67,
+      "id": 50,
       "name": "DNSExit Free Managed DNS",
       "provider": "DNSExit",
       "category": "domains-dns",
@@ -1152,11 +1152,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://dnsexit.com/services/free-dns-service/ and https://dnsexit.com/terms/terms-of-service.jsp. Accessed 2026-10-22 UTC. Observed: page offers '100% free' managed DNS with A/AAAA/MX/CNAME/TXT records, API and Dynamic DNS using ns1-ns4.dnsExit.com; homepage states free plans require no credit card; TOS permits personal and commercial use and requires age 18+. No numeric quota is stated.",
       "notes": "Researcher: SUBAGENT. Free managed DNS is distinct from DNSExit's free second-level domain offer; only the managed DNS offer is recorded here.",
-      "created_at": "2026-10-22T03:34:47Z",
-      "updated_at": "2026-10-22T03:34:47Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 79,
+      "id": 51,
       "name": "Docker-Sponsored Open Source Program",
       "provider": "Docker",
       "category": "open-source-services",
@@ -1175,11 +1175,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://www.docker.com/community/open-source/application/. Accessed 2026-10-22 UTC. Observed: approved projects get a verified Docker Hub badge and removal of pull-rate limits for their public images (abuse rate limits still apply), and core contributors receive a free one-year Docker Team subscription with Docker Desktop, 15 concurrent autobuilds, unlimited vulnerability scans, RBAC and audit logs. Eligibility requires public Docker Hub repositories with public source, meeting the OSI definition, active development within the past six months or regular dependency updates, and no commercialization pathway (donations allowed). Benefits are limited to project leads and core committers. The number of seats and any payment-method or country requirement are not stated.",
       "notes": "Researcher: SUBAGENT. Read the program application page. Remaining uncertainty: contributor seat count and payment-method/country requirements are not stated.",
-      "created_at": "2026-10-22T03:34:59Z",
-      "updated_at": "2026-10-22T03:34:59Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 53,
+      "id": 52,
       "name": "DomaiNesia .my.id Domain Registration",
       "provider": "DomaiNesia",
       "category": "domains-dns",
@@ -1198,11 +1198,11 @@
       "verification_status": "disputed",
       "verification_evidence": "Sources: https://www.domainesia.com/domain-id/ and https://www.domainesia.com/harga-domain/. Accessed 2026-10-22 UTC. Observed: the .ID page price card lists my.id at Rp9,900 for 1 year against a struck-through Rp35,000, while body copy on the same page twice says .my.id is available for Rp12,000 per year. The .my.id requirements row states no documents are needed, only email verification. The /harga-domain/ table is now client-side rendered and per-extension figures could not be re-read there today, so the Rp35,000 renewal figure was not re-confirmed. Remaining conflict: Rp9,900 versus Rp12,000 on official DomaiNesia pages; promo end date unstated.",
       "notes": "Researcher: SUBAGENT2. Conflict not resolvable: Rp9,900 and Rp12,000 both appear on official pages; promo end date and PPN treatment at checkout unstated. Also observed a banner offering a free second .MY.ID/.BIZ.ID/.WEB.ID domain when buying another .ID domain, which is a bundled promotion, not a standalone free offer. Record is a paid offer inside a free-resource catalog; no paid offer type exists in BANSOS.",
-      "created_at": "2026-10-22T03:34:32Z",
-      "updated_at": "2026-10-22T07:32:18Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 6,
+      "id": 53,
       "name": "DuckDNS Free Dynamic DNS",
       "provider": "DuckDNS",
       "category": "domains-dns",
@@ -1221,11 +1221,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://www.duckdns.org/ and https://www.duckdns.org/tac.jsp. Accessed 2026-10-22 UTC. Observed: free dynamic DNS subdomains under duckdns.org with HTTP-based IP updates, offered at no charge and donation-supported. The reviewed pages do not publish a subdomain quota, uptime SLA, or country restrictions. Limitation: no published quota or SLA means reliability and long-term availability are unconfirmed; the record relies on the operator's own site and terms.",
       "notes": "Researcher: AGENT. Accessed 2026-10-22 UTC. DuckDNS home page and terms page reviewed. No published subdomain quota or SLA was found; both remain unknown. Service reliability and long-term availability are not guaranteed by the operator.",
-      "created_at": "2026-10-22T01:05:40Z",
-      "updated_at": "2026-10-22T01:07:05Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 123,
+      "id": 54,
       "name": "ElevenLabs Free Plan",
       "provider": "ElevenLabs",
       "category": "ai-apis",
@@ -1244,11 +1244,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://elevenlabs.io/pricing. Accessed 2026-10-23 UTC. Observed: the Free plan is $0 with 10,000 credits per month, 3 Studio projects and no commercial license. Starter is $6/month for 30,000 credits; Creator is $22/month for 121,000 credits. The page says unused credits do not roll over on the Free plan. It did not state whether a payment method is required to start the Free plan.",
       "notes": "Researcher: AGENT. Accessed 2026-10-23 UTC. Official pricing page reviewed. Payment-method requirement for the Free plan was not stated; the page only says paid subscriptions accept credit card, Apple Pay and Google Pay.",
-      "created_at": "2026-10-23T11:36:34Z",
-      "updated_at": "2026-10-23T11:36:35Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 62,
+      "id": 55,
       "name": "EU.org Free Subdomains",
       "provider": "EU.org",
       "category": "domains-dns",
@@ -1267,11 +1267,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://nic.eu.org/, https://nic.eu.org/register.html and https://nic.eu.org/policy.html. Accessed 2026-10-22 UTC. Observed: site advertises 'free domain names since 1996' and free subdomain registration for users/non-profits; registration requires choosing an open domain, configuring nameservers, creating an account and waiting for human validation (a few days). Policy welcomes non-European sites and discourages commercial use.",
       "notes": "Researcher: SUBAGENT. Site content is dated (references to 1996 and the .ORG sale) but the registration flow and policy pages are live. No numeric limits found; approval is discretionary.",
-      "created_at": "2026-10-22T03:34:42Z",
-      "updated_at": "2026-10-22T03:34:43Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 55,
+      "id": 56,
       "name": "Exabytes .MY.ID Domain Registration",
       "provider": "Exabytes Indonesia",
       "category": "domains-dns",
@@ -1290,11 +1290,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://www.exabytes.co.id/domain/domain-my-id. Accessed 2026-10-22 UTC. Observed: the .MY.ID table lists Rp3,000 for 1 year against a struck-through Rp29,900/year and Rp59,800/year for 2 years; the terms state the promo is for new registrations only and renewal returns to normal price; the footer states prices exclude PPN 11%. The page does not explicitly label Rp29,900 as the renewal price.",
       "notes": "Researcher: SUBAGENT. The struck-through Rp29,900/year is the page's stated normal annual price; no separate renewal quote is published. Remaining uncertainty: exact renewal price, promo end date, and tax at checkout. This is a paid registration offer; BANSOS has no paid-offer type, so offer_type is unknown.",
-      "created_at": "2026-10-22T03:34:35Z",
-      "updated_at": "2026-10-22T03:34:35Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 73,
+      "id": 57,
       "name": "Figma Education Plan",
       "provider": "Figma",
       "category": "education-benefits",
@@ -1313,11 +1313,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://www.figma.com/education/. Accessed 2026-10-22 UTC. Observed: the FAQ states Figma and FigJam are '100% free for students, educators and schools. No freemium or hidden upgrades, ever', that higher education institutions and bootcamps get the Professional tier free and K-12 districts get the Enterprise tier free; eligibility covers teachers and students over 13 in a structured classroom after verifying education status; students under 13 require the school to sign Figma's terms. The page does not state a payment method, seat count or storage quota.",
       "notes": "Researcher: SUBAGENT. No seat or storage quota is published for the education tiers, so included_limits records only the tier entitlement. Payment method and country-level eligibility are not stated.",
-      "created_at": "2026-10-22T03:34:52Z",
-      "updated_at": "2026-10-22T03:34:53Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 42,
+      "id": 58,
       "name": "Firebase Firestore Spark Plan",
       "provider": "Google (Firebase)",
       "category": "databases-storage",
@@ -1336,11 +1336,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://firebase.google.com/docs/firestore/quotas and https://firebase.google.com/pricing. Accessed 2026-10-22 UTC. Observed: the free Firestore quota is 1 GiB stored data, 50,000 document reads/day, 20,000 writes/day, 20,000 deletes/day and 10 GiB/month outbound transfer; exactly one free database per project. The pricing page states the Spark plan requires no payment method.",
       "notes": "Researcher: SUBAGENT. Firestore quota docs and Firebase pricing page reviewed. The free quota applies at project level; backup/PITR features require billing. Region and inactivity behaviour were not stated.",
-      "created_at": "2026-10-22T03:34:24Z",
-      "updated_at": "2026-10-22T03:34:25Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 103,
+      "id": 59,
       "name": "Firebase Hosting Spark Plan",
       "provider": "Google (Firebase)",
       "category": "web-hosting",
@@ -1359,11 +1359,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://firebase.google.com/docs/hosting/usage-quotas-pricing. Accessed 2026-10-22 UTC. Observed: Hosting storage is free up to 10 GB, with a 2 GB maximum size for an individual file; the page documents the free Hosting storage allowance and paid Blaze overage at $0.026/GB. The pricing page separately lists 360 MB/day of data transfer for Spark. No per-project Hosting site-count cap was stated.",
       "notes": "Researcher: SUBAGENT. Hosting quota docs and Firebase pricing page reviewed. The 10 GB storage and 360 MB/day transfer figures come from the Hosting quota/pricing documentation; the site-count cap was not stated.",
-      "created_at": "2026-10-22T03:35:20Z",
-      "updated_at": "2026-10-22T03:35:20Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 114,
+      "id": 60,
       "name": "Fly.io Free Trial",
       "provider": "Fly.io",
       "category": "vps-cloud",
@@ -1382,11 +1382,11 @@
       "verification_status": "verified",
       "verification_evidence": "Sources: https://fly.io/docs/about/pricing/ and https://fly.io/docs/about/free-trial/. Accessed 2026-10-22 UTC. Observed: the pricing page answers that there is no free tier and no monthly free usage allowance for new organizations; the trial page lists 2 total VM hours or 7 days, up to 10 machines, 20 GB volume storage, up to 2 vCPU and 4 GB RAM per machine, auto-stop after 5 minutes, no card to start, and adding a card ends the trial. Trial region eligibility is not stated.",
       "notes": "Researcher: SUBAGENT2. Do not describe this as free hosting; it is a time-limited trial with no recurring free allowance. Payment method is not needed to start the trial but is required afterwards.",
-      "created_at": "2026-10-22T07:35:57Z",
-      "updated_at": "2026-10-22T07:35:57Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 138,
+      "id": 61,
       "name": "FreeHostia Chocolate Free Hosting",
       "provider": "FreeHostia",
       "category": "web-hosting",
@@ -1405,11 +1405,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://www.freehostia.com/free-cloud-hosting/. Accessed 2026-10-23 UTC. Observed: the Chocolate plan includes 250 MB disk space, 6 GB monthly traffic, 24/7 customer support, and a 1-click web application installer; the page describes it as free and usable for as long as wanted without charge, with optional paid upgrades to Watercircle, Lovebeat, Wildhoney, and Supernatural. No card requirement, country list, or expiration was stated.",
       "notes": "Researcher: AGENT. Accessed 2026-10-23 UTC. Reviewed the official Chocolate plan page. Payment-method requirement, country restrictions, and email/database quotas were not stated.",
-      "created_at": "2026-10-23T23:40:11Z",
-      "updated_at": "2026-10-23T23:40:11Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 139,
+      "id": 62,
       "name": "FreeHosting.com Free Plan",
       "provider": "FreeHosting.com",
       "category": "web-hosting",
@@ -1428,11 +1428,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://www.freehosting.com/free-hosting.html. Accessed 2026-10-23 UTC. Observed: $0 per month; 10 GB storage; unmetered bandwidth; 1 hosted website on the user's own domain; 1 email account; 1 MySQL database; Apache and PHP; no expiration date; zero forced upgrades; the page states 'No credit card or verification payment required'; free subdomains and free .TK/.ML/.GA domains are not accepted; services are not provided to users from Brazil, Cuba, Iran, Sudan, Syria, and Vietnam.",
       "notes": "Researcher: AGENT. Accessed 2026-10-23 UTC. Reviewed the full free-plan page and FAQ. The free plan does not include a free subdomain, a free domain, or script-based outgoing mail by default; SSL and additional resources are one-time add-ons.",
-      "created_at": "2026-10-23T23:40:12Z",
-      "updated_at": "2026-10-23T23:40:12Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 7,
+      "id": 63,
       "name": "Gemini API Free Tier",
       "provider": "Google",
       "category": "ai-apis",
@@ -1451,11 +1451,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://ai.google.dev/gemini-api/docs/pricing. Accessed 2026-10-22 UTC. Observed: Free tier provides free input and output tokens for selected models, described as limited access to certain models, and free-tier content is used to improve Google products. Gemini 3.8 Flash, 3.6 Flash, 3.5 Flash-Lite and 3.1 Flash-Lite showed free-tier pricing; Gemini 4 Argon was listed as not available on the free tier. Limitation: exact RPM and TPM quotas are on a separate rate-limits page and account-specific values require sign-in, so no numeric rate limit is recorded; country availability was not established from this page.",
       "notes": "Researcher: AGENT. Accessed 2026-10-22 UTC. Official Gemini Developer API pricing page reviewed. Free-tier model coverage and prices change frequently; this record reflects the page on the access date. Exact RPM and TPM quotas were not visible without sign-in and remain unrecorded. Country availability was not established from this page.",
-      "created_at": "2026-10-22T01:05:56Z",
-      "updated_at": "2026-10-22T01:07:05Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 11,
+      "id": 64,
       "name": "GitHub Actions Free Minutes",
       "provider": "GitHub",
       "category": "dev-tools-ci",
@@ -1474,11 +1474,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://docs.github.com/en/billing/concepts/product-billing/github-actions. Accessed 2026-10-22 UTC. Observed: standard GitHub-hosted runners are free for public repositories; GitHub Free private repositories include 2,000 Actions minutes per month, 500 MB artifact storage and 10 GB cache, with overages billed. Limitation: operating-system minute multipliers and larger-runner pricing were not enumerated; the record covers standard runners only.",
       "notes": "Researcher: AGENT. Accessed 2026-10-22 UTC. Official GitHub Actions billing documentation reviewed. Minute multipliers for operating systems and larger runners were not enumerated; the record covers standard runners only.",
-      "created_at": "2026-10-22T01:05:58Z",
-      "updated_at": "2026-10-22T01:07:22Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 48,
+      "id": 65,
       "name": "GitHub Codespaces Free Quota",
       "provider": "GitHub",
       "category": "dev-tools-ci",
@@ -1497,11 +1497,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://docs.github.com/en/billing/concepts/product-billing/github-codespaces. Accessed 2026-10-22 UTC. Observed: the free-quota table lists GitHub Free personal accounts at 15 GB-month storage and 120 compute hours per month, and GitHub Pro at 20 GB-month and 180 hours; organization and enterprise plans have no free quota. Without a valid payment method, usage is blocked once the quota is used. Paid compute rates start at $0.18/hour for a 2-core machine and storage is $0.07/GB-month.",
       "notes": "Researcher: SUBAGENT. Billing documentation reviewed. payment_method_required is no for using the included quota; a card is required to exceed it. The page does not state the default machine type or regional restrictions.",
-      "created_at": "2026-10-22T03:34:28Z",
-      "updated_at": "2026-10-22T03:34:29Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 3,
+      "id": 66,
       "name": "GitHub Pages",
       "provider": "GitHub",
       "category": "web-hosting",
@@ -1520,11 +1520,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits and https://pages.github.com/. Accessed 2026-10-22 UTC. Observed: 1 GB published site size, 100 GB per month soft bandwidth limit, 10 builds per hour soft limit, one build at a time. Pages is available for public repositories on GitHub Free and serves static content only. The limits page states Pages is not intended for online businesses or sites primarily facilitating commercial transactions or providing commercial SaaS. Limitation: soft limits may be enforced by rate limiting rather than hard errors.",
       "notes": "Researcher: AGENT. Accessed 2026-10-22 UTC. Product page and official GitHub Pages limits page reviewed. Soft limits may be enforced by rate limiting rather than hard failure. Custom domain and HTTPS details not fully re-checked.",
-      "created_at": "2026-10-22T01:05:39Z",
-      "updated_at": "2026-10-22T01:07:03Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 15,
+      "id": 67,
       "name": "GitHub Student Developer Pack",
       "provider": "GitHub",
       "category": "education-benefits",
@@ -1543,11 +1543,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://education.github.com/pack. Accessed 2026-10-22 UTC. Observed: applicants must be at least 13 and currently enrolled in a degree- or diploma-granting program at an accredited institution, with student status verified by GitHub; the pack includes GitHub Pro, 3,000 Actions minutes per month and 180 Codespaces core hours per month. Limitation: partner offers change frequently and were not individually reviewed; availability by country and export-control restrictions were not fully enumerated.",
       "notes": "Researcher: AGENT. Accessed 2026-10-22 UTC. Official Student Developer Pack and eligibility pages reviewed. Partner offers are time-limited and change frequently; the included-limits field reflects only the GitHub-provided benefits confirmed on the page. Individual partner terms were not reviewed.",
-      "created_at": "2026-10-22T01:06:15Z",
-      "updated_at": "2026-10-22T01:07:25Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 77,
+      "id": 68,
       "name": "GitLab for Open Source Program",
       "provider": "GitLab",
       "category": "open-source-services",
@@ -1566,11 +1566,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://about.gitlab.com/solutions/open-source/join/. Accessed 2026-10-22 UTC. Observed: approved projects receive free Ultimate features on GitLab.com or self-managed, 50,000 compute minutes at a program-specific cost factor, no support, annual renewal with downgrade if not renewed, and no Duo Agent Platform credits. Eligibility requires OSI-approved licensing for every project in the namespace, a publicly visible group/instance and source, no revenue from services or enhancements, and owned free-tier groups only (personal namespaces ineligible). The page states availability is excluded in U.S. embargoed countries. Seat count is requested at activation, with no fixed cap stated. Payment-method requirement is not stated. The linked program agreement was also opened at https://handbook.gitlab.com/handbook/legal/opensource-agreement/.",
       "notes": "Researcher: SUBAGENT. Read the program join page and the linked open-source program agreement. Remaining uncertainty: exact seat cap and whether a payment method is required are not stated.",
-      "created_at": "2026-10-22T03:34:56Z",
-      "updated_at": "2026-10-22T03:34:57Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 46,
+      "id": 69,
       "name": "GitLab Free Plan",
       "provider": "GitLab",
       "category": "dev-tools-ci",
@@ -1589,11 +1589,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://about.gitlab.com/pricing/. Accessed 2026-10-22 UTC. Observed: Free is $0 per user/month with 'No credit card required' and lists 5 users per top-level group, 400 compute minutes per month, and 10 GiB adjustable storage. The FAQ clarifies the 5-user limit applies only to private top-level groups and that a credit/debit card is required to use shared runners, verified with a $1 authorization, while self-hosted runners need no card. The page also states GitLab.com is hosted on Google Cloud Platform in the USA.",
       "notes": "Researcher: SUBAGENT. Pricing page and FAQ reviewed. payment_method_required is yes because the free shared-runner minutes require card verification, although account signup does not. Behaviour after the 400 minutes are exhausted and country restrictions beyond US hosting were not detailed.",
-      "created_at": "2026-10-22T03:34:27Z",
-      "updated_at": "2026-10-22T03:34:27Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 102,
+      "id": 70,
       "name": "GitLab Pages",
       "provider": "GitLab",
       "category": "web-hosting",
@@ -1612,11 +1612,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://docs.gitlab.com/user/project/pages/. Accessed 2026-10-22 UTC. Observed: GitLab Pages serves static sites only (no PHP/ASP), supports custom domains and TLS, and runs on GitLab-provided infrastructure at no additional cost. The GitLab pricing page states the Free plan needs no credit card and lists 400 compute minutes per month, 10 GiB repository/LFS storage and 5 users per private top-level group; it does not publish a Pages-specific bandwidth or site-size limit.",
       "notes": "Researcher: SUBAGENT. Reviewed the Pages documentation and GitLab's pricing page. Remaining uncertainty: Pages-specific bandwidth and storage caps are not published, and the compute/storage figures are plan-wide rather than Pages-only. Shared runners may require card verification for some accounts.",
-      "created_at": "2026-10-22T03:35:19Z",
-      "updated_at": "2026-10-22T03:35:20Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 2,
+      "id": 71,
       "name": "Google Cloud Free Tier",
       "provider": "Google Cloud",
       "category": "vps-cloud",
@@ -1635,11 +1635,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://cloud.google.com/free. Accessed 2026-10-22 UTC. Observed: 300 USD Free Trial credit for new customers valid for 90 days; Always Free e2-micro instance in us-west1, us-central1 or us-east1 with 30 GB standard persistent disk; 5 GB-month Cloud Storage in US regions; 1 TB BigQuery query processing per month. Conflict noted: the page states 120 Cloud Build build-minutes per day, while Cloud Build pricing documentation states 2,500 build-minutes per month, so the Cloud Build allowance is not treated as confirmed. Limitation: country-specific Free Trial terms and other product quotas were not individually verified.",
       "notes": "Researcher: AGENT. Accessed 2026-10-22 UTC. Official free-tier page reviewed. Known conflict: the free page states 120 Cloud Build build-minutes per day, while Cloud Build pricing documentation states 2,500 build-minutes per month for the free tier; the Cloud Build figure is therefore uncertain and should be re-checked. Other quotas were read directly from the page.",
-      "created_at": "2026-10-22T01:05:38Z",
-      "updated_at": "2026-10-22T01:07:02Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 110,
+      "id": 72,
       "name": "Grafana Cloud Free",
       "provider": "Grafana",
       "category": "dev-tools-ci",
@@ -1658,11 +1658,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://grafana.com/pricing/. Accessed 2026-10-22 UTC. Observed: each product section shows an always-free 0 USD tier with the quotas recorded here and states no credit card required; the free plan includes all Grafana Cloud services with 14-day retention and community support. No region or eligibility statement appears on the page.",
       "notes": "Researcher: SUBAGENT2. Quotas are listed per product; combined free-tier behaviour beyond the listed limits was not reviewed. No official terms URL recorded.",
-      "created_at": "2026-10-22T07:35:53Z",
-      "updated_at": "2026-10-22T07:35:54Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 8,
+      "id": 73,
       "name": "Groq Free Plan",
       "provider": "Groq",
       "category": "ai-apis",
@@ -1681,11 +1681,11 @@
       "verification_status": "disputed",
       "verification_evidence": "Sources: https://console.groq.com/docs/rate-limits, https://console.groq.com/docs/billing-faqs, https://console.groq.com/docs/service-tiers and https://groq.com/pricing. Accessed 2026-10-22 UTC. Observed: the rate-limits page says the table shows the base limits for the Developer plan immediately above tabs labelled Free Plan Limits and Developer Plan Limits, so Free-plan quotas cannot be established. The billing FAQ confirms a Free tier exists, that Developer adds higher limits, and that upgrading requires a credit card, US bank account or SEPA debit account; it does not publish Free-tier limits. groq.com/pricing is now a marketing page with no plan or price data. Per-account limits sit behind sign-in, which was not accessed.",
       "notes": "Researcher: SUBAGENT2. Only remaining contradiction is docs-internal (tab labels versus body text); Free-plan quotas are unknown and not obtainable without an account.",
-      "created_at": "2026-10-22T01:05:57Z",
-      "updated_at": "2026-10-22T07:32:19Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 116,
+      "id": 74,
       "name": "Healthchecks.io Hobbyist Plan",
       "provider": "Healthchecks.io",
       "category": "dev-tools-ci",
@@ -1704,11 +1704,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://healthchecks.io/pricing/. Accessed 2026-10-23 UTC. Observed: the Hobbyist plan is listed at $0/month with monitoring for 20 jobs and 100 log entries per job; Supporter is $5/month, Business $20/month, and Business Plus $80/month. The reviewed page did not state whether a payment method is required for the free plan.",
       "notes": "Researcher: AGENT. Accessed 2026-10-23 UTC. Official pricing page reviewed. Payment-method requirement for the free plan was not stated on the reviewed page.",
-      "created_at": "2026-10-23T11:34:04Z",
-      "updated_at": "2026-10-23T11:34:09Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 137,
+      "id": 75,
       "name": "HelioHost Free Hosting (Johnny)",
       "provider": "HelioHost",
       "category": "web-hosting",
@@ -1727,11 +1727,11 @@
       "verification_status": "verified",
       "verification_evidence": "Sources: https://heliohost.org/ and https://heliohost.org/signup/. Accessed 2026-10-23 UTC. Observed: HelioHost is a 501(c)(3) nonprofit; the free Johnny plan lists unlimited bandwidth subject to fair use, 200 GB memory per day, 10k CPU per day, and 5 domains; the homepage lists 1,000 MB storage and unlimited inodes; the site lists PHP, Node.js, ASP.NET, Java/JSP, Ruby on Rails, Django/Python, Perl, MySQL, PostgreSQL, SQLite, Plesk, and email; free signups were enabled; the homepage states service is unavailable to anyone in Iran, Cuba, and North Korea. Payment method was not stated.",
       "notes": "Researcher: AGENT. Accessed 2026-10-23 UTC. Reviewed the homepage and signup page. Free signups were enabled at review time after a server rebuild. The 1,000 MB storage figure is from the homepage; the signup plan table lists memory and CPU but not storage for Johnny. Payment-method requirement and a full country list were not stated.",
-      "created_at": "2026-10-23T23:40:10Z",
-      "updated_at": "2026-10-23T23:41:35Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 127,
+      "id": 76,
       "name": "Honeycomb Free Plan",
       "provider": "Honeycomb",
       "category": "dev-tools-ci",
@@ -1750,11 +1750,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://www.honeycomb.io/pricing. Accessed 2026-10-23 UTC. Observed: the Free plan is described as free forever and includes up to 20M events/month, up to 100M time series data points/month and 2 triggers. Pro pricing starts at $150/month for 50M events and 250M time series data points. The page did not state a payment-method requirement for the Free plan.",
       "notes": "Researcher: AGENT. Accessed 2026-10-23 UTC. Official pricing page reviewed. Payment-method requirement for the Free plan was not stated.",
-      "created_at": "2026-10-23T11:36:39Z",
-      "updated_at": "2026-10-23T11:36:39Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 59,
+      "id": 77,
       "name": "Hostnic .my.id/.biz.id Domain Promo",
       "provider": "Hostnic",
       "category": "domains-dns",
@@ -1773,11 +1773,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://www.hostnic.id/promo/jungkir-domain-termurah/. Accessed 2026-10-22 UTC. Observed: the promo offers .my.id and .biz.id at Rp10,000 for the first year; terms state first-year only, one transaction, minimum 5 characters, new registrations only, limited stock, valid until 31 December 2026 at 17:00 WIB. The page does not state the renewal price, normal price, tax treatment, or document requirements.",
       "notes": "Researcher: SUBAGENT. The page is dated 'Last updated on Juli 1, 2026'. Remaining uncertainty: renewal price, normal price, tax treatment, and stock. This is a paid registration offer; BANSOS has no paid-offer type, so offer_type is unknown.",
-      "created_at": "2026-10-22T03:34:40Z",
-      "updated_at": "2026-10-22T03:34:40Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 113,
+      "id": 78,
       "name": "Hugging Face Spaces Free Compute (CPU Basic)",
       "provider": "Hugging Face",
       "category": "app-deployment",
@@ -1796,11 +1796,11 @@
       "verification_status": "verified",
       "verification_evidence": "Sources: https://huggingface.co/pricing and https://huggingface.co/docs/inference-providers/pricing. Accessed 2026-10-22 UTC. Observed: the Spaces hardware table lists CPU Basic at 2 vCPU and 16 GB RAM as free and ZeroGPU as free, with PRO at 9 USD/month adding 2 USD of inference credits and an eight-times ZeroGPU quota; the Inference Providers doc states free users receive no monthly credits and must purchase credits. The exact free ZeroGPU quota is not published.",
       "notes": "Researcher: SUBAGENT2. Free offer covers Spaces hardware only; do not read it as a free inference API allowance. ZeroGPU quota is not published. No official terms URL recorded.",
-      "created_at": "2026-10-22T07:35:56Z",
-      "updated_at": "2026-10-22T07:35:57Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 61,
+      "id": 79,
       "name": "Hurricane Electric Free DNS",
       "provider": "Hurricane Electric",
       "category": "domains-dns",
@@ -1819,11 +1819,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://dns.he.net/. Accessed 2026-10-22 UTC. Observed: page describes a 'Free DNS service' with forward/reverse zones, multiple domains per account, listed record types, slave support and dynamic DNS; access requires an HE account, with free signup for IPv6 certification/tunnelbroker users. Page footer shows last update 2020 and calls the service an Open Beta; no price or quota is listed.",
       "notes": "Researcher: SUBAGENT. Page is old (updated 2020) and still labels the service Open Beta; no numeric limits or current expansion of eligibility were confirmed.",
-      "created_at": "2026-10-22T03:34:42Z",
-      "updated_at": "2026-10-22T03:34:42Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 97,
+      "id": 80,
       "name": "IBM Cloud Free Tier (Lite Plans)",
       "provider": "IBM",
       "category": "vps-cloud",
@@ -1842,11 +1842,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://www.ibm.com/cloud/free. Accessed 2026-10-22 UTC. Observed: 40+ always-free Lite products with no time limit and one instance per Lite service; apps sleep after 10 days of inactivity and Lite instances are deleted after 30 days of inactivity; monthly quotas reset per org; a $200 30-day credit requires upgrading to Pay-as-you-go; a credit card is required at signup and IBM notes a temporary hold of about $1 may appear.",
       "notes": "Researcher: SUBAGENT. Reviewed the IBM Cloud Free page only; no separate terms page was opened. Remaining uncertainty: the page does not enumerate every Lite service quota, and the card-hold amount is described as approximate.",
-      "created_at": "2026-10-22T03:35:15Z",
-      "updated_at": "2026-10-22T03:35:15Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 56,
+      "id": 81,
       "name": "IDwebhost .my.id Domain Registration",
       "provider": "IDwebhost",
       "category": "domains-dns",
@@ -1865,11 +1865,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://idwebhost.com/domain-murah. Accessed 2026-10-22 UTC. Observed: the .my.id card shows a struck-through Rp22,000 and Rp3,000 (Diskon 86%); the page does not label Rp22,000 as renewal or state a .my.id renewal price. The FAQ says no special requirements generally and lists special-document extensions without .my.id.",
       "notes": "Researcher: SUBAGENT. The /domain-murah page directly shows the discount and strike price; the renewal rate remains unpublished. Remaining uncertainty: promo duration, renewal price, term, and tax. This is a paid registration offer; BANSOS has no paid-offer type, so offer_type is unknown.",
-      "created_at": "2026-10-22T03:34:36Z",
-      "updated_at": "2026-10-22T03:34:36Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 105,
+      "id": 82,
       "name": "InfinityFree Free Hosting",
       "provider": "InfinityFree",
       "category": "web-hosting",
@@ -1888,11 +1888,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://www.infinityfree.com/. Accessed 2026-10-22 UTC. Observed: 5 GB disk, unlimited bandwidth, PHP 8.4, MySQL 8.0/MariaDB 11.4, up to 400 MySQL databases, free subdomains and custom domains, free SSL and no forced ads; signup requires no credit card and accounts have no expiry, but the terms and site note that accounts need a few hits per month to stay active.",
       "notes": "Researcher: SUBAGENT. Reviewed the homepage and terms of service. Remaining uncertainty: inode/file-count and daily hit or process limits are not stated on the reviewed pages.",
-      "created_at": "2026-10-22T03:35:22Z",
-      "updated_at": "2026-10-22T03:35:22Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 94,
+      "id": 83,
       "name": "IPinfo Lite",
       "provider": "IPinfo",
       "category": "other",
@@ -1911,11 +1911,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://ipinfo.io/pricing. Accessed 2026-10-22 UTC. Observed: the IPinfo Lite card shows $0/mo, 'Free forever · no credit card', 50 web lookups and unlimited API requests with country-level geolocation only; the comparison table limits Lite to country and continent geolocation and ASN name and domain, and marks city, privacy detection, connection context, company, carrier and WHOIS as unavailable; the commercial license row shows a check mark with 'Attribution required' for Lite. Paid tier prices are also listed.",
       "notes": "Researcher: SUBAGENT. The unusual structure of this free plan - unlimited requests but country-level data only - is why included_limits lists both the request allowance and the excluded data fields. Database download availability was not recorded because the pricing table and the FAQ appear to conflict on it.",
-      "created_at": "2026-10-22T03:35:12Z",
-      "updated_at": "2026-10-22T03:35:13Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 63,
+      "id": 84,
       "name": "is-a.dev Free Developer Subdomains",
       "provider": "is-a.dev",
       "category": "domains-dns",
@@ -1934,11 +1934,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://is-a.dev/, https://docs.is-a.dev/quickstart/ and https://docs.is-a.dev/faq/. Accessed 2026-10-22 UTC. Observed: homepage calls it a free service for developers; quickstart requires a personal/non-commercial software site plus a GitHub fork and PR; FAQ lists supported record types and says nested subdomains are allowed. No numeric quota or payment requirement is stated.",
       "notes": "Researcher: SUBAGENT. The linked terms page (https://is-a.dev/terms) is a client-rendered app that did not render for review. Approval is at maintainers' discretion.",
-      "created_at": "2026-10-22T03:34:43Z",
-      "updated_at": "2026-10-22T03:34:44Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 58,
+      "id": 85,
       "name": "Jagoweb .MY.ID Domain Registration",
       "provider": "Jagoweb",
       "category": "domains-dns",
@@ -1957,11 +1957,11 @@
       "verification_status": "disputed",
       "verification_evidence": "Source: https://www.jagoweb.com/daftar-domain. Accessed 2026-10-22 UTC. Observed: the Indonesia table lists .MY.ID registration at Rp10,500 and renewal at Rp11,000, with a note that .MY.ID can be registered without conditions and that terms are annual; the same site Domain menu panel says Domain Indonesia Rp15,000 per year describing .my.id, and the page headline says starting from Rp10,000. The Rp10,500 versus Rp15,000 conflict is unresolved. The /domain-myid-gratis page contains no free .my.id terms.",
       "notes": "Researcher: SUBAGENT2. Which figure applies at checkout, promo duration and tax treatment remain unstated. A /domain-myid-gratis page exists but its content is a generic hosting template with no stated free .my.id terms, so it is not evidence of a free offer; free domains appear tied to hosting purchases.",
-      "created_at": "2026-10-22T03:34:39Z",
-      "updated_at": "2026-10-22T07:32:20Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 16,
+      "id": 86,
       "name": "JetBrains Educational Licenses",
       "provider": "JetBrains",
       "category": "education-benefits",
@@ -1980,11 +1980,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://www.jetbrains.com/community/education/. Accessed 2026-10-22 UTC. Observed: free one-year educational licenses for JetBrains tools for verified students and teachers, renewable annually while eligibility continues and restricted to non-commercial use. Verification typically uses an institutional email or supporting documentation. Limitation: the exact list of included tools and renewal mechanics were not enumerated; country exclusions were not stated.",
       "notes": "Researcher: AGENT. Accessed 2026-10-22 UTC. Official education page reviewed; it points to the student pack at https://www.jetbrains.com/academy/student-pack/. The exact tool list and renewal mechanics were not enumerated. Educational licenses may not be used for commercial development.",
-      "created_at": "2026-10-22T01:06:16Z",
-      "updated_at": "2026-10-22T01:07:25Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 81,
+      "id": 87,
       "name": "JetBrains Open Source Development Licenses",
       "provider": "JetBrains",
       "category": "open-source-services",
@@ -2003,11 +2003,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://www.jetbrains.com/shop/eform/opensource. Accessed 2026-10-22 UTC. Observed: the application form offers free All Products Pack and Team Tools licenses for non-commercial open-source development. It requires the applicant to be a project lead or core contributor and to provide a project website, repository URL and license URL; GitHub activity is checked automatically and only active contributors with regular visible code contributions qualify, with non-code commits excluded. The form requires a country/region and acceptance of the JetBrains Account Agreement, and lets the applicant choose the number of licenses. No license duration or payment-method requirement is stated.",
       "notes": "Researcher: SUBAGENT. The main community open-source page returned only its title because it is client-rendered, so the official application form was used as the source. Remaining uncertainty: license duration and payment-method requirement are not stated.",
-      "created_at": "2026-10-22T03:35:00Z",
-      "updated_at": "2026-10-22T03:35:00Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 64,
+      "id": 88,
       "name": "JS.ORG Free Subdomains",
       "provider": "JS.ORG",
       "category": "domains-dns",
@@ -2026,11 +2026,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://js.org/ and https://js.org/terms.html. Accessed 2026-10-22 UTC. Observed: homepage offers free js.org subdomains for GitHub Pages using a CNAME file and PR, expected live within 24 hours; terms state JS.ORG is a free service providing subdomains under js.org and may terminate or modify the service with at least 7 days' notice. No quota or fee is stated.",
       "notes": "Researcher: SUBAGENT. Service is tied to GitHub Pages and is not general-purpose DNS hosting. Terms last updated 2024-10-03.",
-      "created_at": "2026-10-22T03:34:44Z",
-      "updated_at": "2026-10-22T03:34:45Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 135,
+      "id": 89,
       "name": "Kamatera 30-Day Free Trial",
       "provider": "Kamatera",
       "category": "vps-cloud",
@@ -2049,11 +2049,11 @@
       "verification_status": "verified",
       "verification_evidence": "Sources: https://www.kamatera.com/free-trial/ and https://www.kamatera.com/faq/answer/what-are-the-terms-of-the-free-trial/. Accessed 2026-10-23 UTC. Observed: a 30-day trial; one server with a configuration costing up to $100; 1 TB cloud block storage; 1 TB free traffic including inbound and outbound; full platform feature access; a valid credit card is required to start, but is not charged if usage stays within the limits; terminating the server before the trial ends avoids charges, otherwise billing begins after the trial. No country list or eligibility beyond the card requirement was stated.",
       "notes": "Researcher: AGENT. Accessed 2026-10-23 UTC. Reviewed the official free-trial page and free-trial FAQ. Country availability and the definition of a new customer were not stated.",
-      "created_at": "2026-10-23T23:38:37Z",
-      "updated_at": "2026-10-23T23:40:52Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 109,
+      "id": 90,
       "name": "Koyeb Free Web Service",
       "provider": "Koyeb",
       "category": "app-deployment",
@@ -2072,11 +2072,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://www.koyeb.com/docs/faqs/pricing, cross-checked https://www.koyeb.com/pricing. Accessed 2026-10-22 UTC. Observed: the FAQ free-tier entry lists one free web Service with 512 MB RAM, 0.1 vCPU and 2 GB SSD in Frankfurt or Washington, D.C., plus one free PostgreSQL database limited to 5 hours active time and 1 GB storage; card validation with a 29 USD pre-authorization hold is required and the older 5.50 USD credit was discontinued. The pricing page shows paid plans only, with no free plan card.",
       "notes": "Researcher: SUBAGENT2. FAQ last updated 2026-05-27 and treated as current; the paid pricing page omits a free plan card, and Koyeb announced joining Mistral AI, so terms may change. Card requirement includes a 29 USD pre-authorization hold; the 5.50 USD signup credit was discontinued in February 2024.",
-      "created_at": "2026-10-22T07:35:52Z",
-      "updated_at": "2026-10-22T07:35:53Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 19,
+      "id": 91,
       "name": "Let's Encrypt Certificates",
       "provider": "Internet Security Research Group (ISRG)",
       "category": "other",
@@ -2095,11 +2095,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://letsencrypt.org/docs/faq/ and https://letsencrypt.org/docs/rate-limits/. Accessed 2026-10-22 UTC. Observed: Let's Encrypt charges no fee for certificates; it issues Domain Validation certificates only, including SAN and wildcard certificates, with wildcards requiring DNS-01. Default lifetime is 90 days, with an opt-in six-day short-lived certificate. Rate limits include 50 certificates per registered domain every 7 days, 300 new orders per account every 3 hours, and 5 certificates per exact set of identifiers every 7 days. Limitation: no uptime or issuance SLA was found; hosting providers may add their own management fees.",
       "notes": "Researcher: AGENT. Accessed 2026-10-22 UTC. Official FAQ and rate-limits pages reviewed. Certificates are valid for 90 days by default and must be renewed; clients are advised to renew at 60 days. No uptime or issuance SLA was found. Rate-limit overrides exist only for qualifying large integrators.",
-      "created_at": "2026-10-22T01:06:42Z",
-      "updated_at": "2026-10-22T01:07:57Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 130,
+      "id": 92,
       "name": "LiveKit Cloud Build Plan",
       "provider": "LiveKit",
       "category": "other",
@@ -2118,11 +2118,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://livekit.io/pricing. Accessed 2026-10-23 UTC. Observed: the Build plan is $0/month with no credit card required. It includes 1,000 agent session minutes, 5 concurrent agent sessions, 1 agent deployment, $2.50 in inference credits, 5,000 WebRTC minutes, 100 concurrent connections, 50 GB downstream data, one free US local number with 50 inbound minutes, 100,000 observability events, 1,000 agent session recording minutes, 350 text simulation turns, 60 audio simulation turns and 1,000 third-party SIP minutes. The page did not explicitly state a monthly reset for every allowance.",
       "notes": "Researcher: AGENT. Accessed 2026-10-23 UTC. Official pricing page and its Markdown version reviewed. Allowances are listed for the Build plan; the page does not explicitly state a monthly reset for every allowance.",
-      "created_at": "2026-10-23T11:36:41Z",
-      "updated_at": "2026-10-23T11:36:42Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 69,
+      "id": 93,
       "name": "LuaDNS Free Package",
       "provider": "LuaDNS",
       "category": "domains-dns",
@@ -2141,11 +2141,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://www.luadns.com/pricing.html. Accessed 2026-10-22 UTC. Observed: the pricing table still lists a Free package with anycast network, 3 domains, 30 records, 5-minute minimum TTL, unlimited queries/month, web redirects, email forwarding, reverse zones, AXFR, Dynamic DNS, DNSSEC and API; vanity nameservers and health checks are paid-only. Paid packages are $29/year, $39/year and $50/year. The free column has no price and no payment-method statement; /terms.html returns 404 and only /privacy.html is linked.",
       "notes": "Researcher: SUBAGENT3. /terms.html returns 404 and the footer links only to /privacy.html, so no official terms page exists to record. Payment requirement is unstated on reviewed pages.",
-      "created_at": "2026-10-22T03:34:48Z",
-      "updated_at": "2026-10-22T07:33:26Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 96,
+      "id": 94,
       "name": "Microsoft Azure Free Account",
       "provider": "Microsoft",
       "category": "vps-cloud",
@@ -2164,11 +2164,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://azure.microsoft.com/en-us/free/. Accessed 2026-10-22 UTC. Observed: $200 credit for 30 days, 65+ always-free services, 20+ services free for 12 months, and 750 hours each of B1s, B2pts v2 and B2ats v2; a phone number and non-prepaid credit/debit card are required; availability is listed as 140 countries excluding US Government, Azure China and Azure Germany. The offer terms page at https://azure.microsoft.com/en-us/pricing/offers/ms-azr-0044p/ confirms the 30-day credit and one-account-per-customer limit.",
       "notes": "Researcher: SUBAGENT. Reviewed the free-account page and the offer terms. Remaining uncertainty: whether the card is charged a verification amount is not stated; only headline service allowances were reviewed, and individual service quotas can change.",
-      "created_at": "2026-10-22T03:35:14Z",
-      "updated_at": "2026-10-22T03:35:14Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 74,
+      "id": 95,
       "name": "Miro Education Plan",
       "provider": "Miro",
       "category": "education-benefits",
@@ -2187,11 +2187,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://miro.com/education/. Accessed 2026-10-22 UTC. Observed: the Student plan is Free with 10 team members, 2 years, unlimited boards, 1 workspace, unlimited external visitors and 100 AI credits per month per team; the Educator plan is Free forever with 100 team members and the same AI allowance; the Institution plan is Custom and starts at 50% off the regular price. The page provides no document checklist, country restriction or payment-method statement.",
       "notes": "Researcher: SUBAGENT. The student plan is explicitly time-limited to 2 years, which is captured in included_limits. Verification is by application but the required documents are not described on this page.",
-      "created_at": "2026-10-22T03:34:53Z",
-      "updated_at": "2026-10-22T03:34:54Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 129,
+      "id": 96,
       "name": "Modal Starter Plan",
       "provider": "Modal",
       "category": "app-deployment",
@@ -2210,11 +2210,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://modal.com/pricing. Accessed 2026-10-23 UTC. Observed: the Starter plan is $0/month plus compute, includes $30/month in free credits, up to 3 workspace seats, 100 containers, 10 GPU concurrency, 1 TiB/month free network egress and 1-day log retention. Usage above the included credits is billed pay-as-you-go. The page did not state whether a payment method is required to start.",
       "notes": "Researcher: AGENT. Accessed 2026-10-23 UTC. Official pricing page reviewed. The page says workspaces receive a free monthly compute allotment and does not state a payment-method requirement.",
-      "created_at": "2026-10-23T11:36:40Z",
-      "updated_at": "2026-10-23T11:36:41Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 38,
+      "id": 97,
       "name": "MongoDB Atlas Free Cluster (M0)",
       "provider": "MongoDB",
       "category": "databases-storage",
@@ -2233,11 +2233,11 @@
       "verification_status": "verified",
       "verification_evidence": "Sources: https://www.mongodb.com/pricing, https://www.mongodb.com/docs/atlas/reference/free-shared-limitations/ and https://www.mongodb.com/docs/atlas/backup/cloud-backup/free-cluster-backup/. Accessed 2026-10-22 UTC. Observed: pricing confirms the M0/Free cluster at $0/hour, free forever, 512 MB storage, shared RAM/vCPU, 32 MB sort memory and 100 ops/sec. The limits doc confirms connection, namespace, throughput, data-transfer and region limits and says backups can be enabled with daily snapshots and up to four retained. The pricing FAQ still states backup services are not available for the Free tier; the dedicated backup doc resolves this by showing Free-cluster backups as an optional paid private-preview subscription at $0.10/day capped at $3.00/month that requires a payment method on file. Payment method is not required for the free cluster itself and is not stated as such.",
       "notes": "Researcher: SUBAGENT2. Country availability is described as a region subset, not a country list. The backup add-on is a private preview and may not be offered to every account; a second reviewer found the pricing FAQ still states backups are unavailable on Free, resolved only by the dedicated backup page.",
-      "created_at": "2026-10-22T03:34:21Z",
-      "updated_at": "2026-10-22T07:32:21Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 66,
+      "id": 98,
       "name": "Namecheap FreeDNS",
       "provider": "Namecheap",
       "category": "domains-dns",
@@ -2256,11 +2256,11 @@
       "verification_status": "stale",
       "verification_evidence": "Source: https://www.namecheap.com/domains/freedns/. Accessed 2026-10-22 UTC. Observed: the FreeDNS product page returned HTTP 403 to both direct and browser-like requests, so its content could not be read and no facts were taken from it; bot protection was not circumvented. Site navigation still links to the FreeDNS product page and https://www.namecheap.com/legal/ lists the Universal Terms of Service Agreement. Offer details, quotas and payment requirement could not be re-confirmed today, so the record is marked stale rather than verified.",
       "notes": "Researcher: SUBAGENT. The page describes completing a '$0' cart but does not say whether payment details are requested; payment requirement marked unknown. PremiumDNS is the paid upgrade.",
-      "created_at": "2026-10-22T03:34:46Z",
-      "updated_at": "2026-10-22T07:33:27Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 140,
+      "id": 99,
       "name": "Nekoweb Free Static Hosting",
       "provider": "Nekoweb",
       "category": "web-hosting",
@@ -2279,11 +2279,11 @@
       "verification_status": "verified",
       "verification_evidence": "Sources: https://nekoweb.org/upgrade, https://nekoweb.org/faq, and https://nekoweb.org/tos. Accessed 2026-10-23 UTC. Observed: the upgrade page lists '10GB of storage instead of 500MB' and '100,000 max files instead of 5,000' for paid tiers; the FAQ calls Nekoweb a free static hosting service, states there are no file-type limits, no PHP, and generally no bandwidth limit but heavy sites may be asked to upgrade; the TOS is dated September 18, 2026. No card requirement or country availability was stated.",
       "notes": "Researcher: AGENT. Accessed 2026-10-23 UTC. The free quotas come from the official upgrade page, which contrasts paid 10 GB / 100,000 files with free 500 MB / 5,000 files. The FAQ says bandwidth is generally unlimited but heavy users may be asked to upgrade. Payment-method requirement and country availability were not stated.",
-      "created_at": "2026-10-23T23:40:13Z",
-      "updated_at": "2026-10-23T23:40:13Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 36,
+      "id": 100,
       "name": "Neon Free Plan",
       "provider": "Neon",
       "category": "databases-storage",
@@ -2302,8 +2302,8 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://neon.com/pricing. Accessed 2026-10-22 UTC. Observed: Free is $0/month, described as permanent rather than a trial, with no credit card required; 100 CU-hours per project, 1 GB storage per project and 20 GB per account, 5 GB egress per project, 100 projects, 10 branches, 5 GB object storage, 1 snapshot, 60k MAU, 1-day monitoring retention; exhaustion suspends compute or blocks writes without deleting data. Terms link resolves to the Databricks Product Specific Schedule for Neon (last updated 2026-10-14).",
       "notes": "Researcher: SUBAGENT3. Payment-method requirement is stated as no on the pricing page. The terms URL resolves to the Databricks Product Specific Schedule for Neon (Neon is now under Databricks), so terms may change. Country eligibility not stated.",
-      "created_at": "2026-10-22T03:34:20Z",
-      "updated_at": "2026-10-22T07:33:13Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
       "id": 101,
@@ -2325,11 +2325,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://www.netlify.com/pricing/. Accessed 2026-10-22 UTC. Observed: Free plan at $0 with a 300-credit limit; credits cost 15 per production deploy, 20 per GB bandwidth, 2 per 10,000 requests and 10 per GB-hour of compute; unlimited deploy previews, custom domains and SSL, global CDN, functions/AI and database/blob storage are listed as included; Personal is $9/month for 1,000 credits and Pro $20/month for 3,000 credits. The page does not state the credit reset period or a payment-method requirement.",
       "notes": "Researcher: SUBAGENT. Reviewed the pricing page. Remaining uncertainty: the page does not state whether the 300 credits reset monthly or what happens when they run out, and it does not say whether a card is required to stay on the free plan.",
-      "created_at": "2026-10-22T03:35:18Z",
-      "updated_at": "2026-10-22T03:35:19Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 78,
+      "id": 102,
       "name": "Netlify Open Source Plan",
       "provider": "Netlify",
       "category": "open-source-services",
@@ -2348,11 +2348,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://www.netlify.com/open-source/. Accessed 2026-10-22 UTC. Observed: the open-source plan includes 10,000 credits per month, free production deploys, Deploy Previews per pull request, unlimited team members, and sites that stay live when credits run out, with extra credits at Pro rates. Eligibility requires an OSI-approved or Creative Commons attribution/public-domain license, a Code of Conduct, a link back to Netlify on the main page or all internal pages, and non-commercial use with no commercial support or hosting; applications are reviewed. The linked open-source policy at https://www.netlify.com/legal/open-source-policy/ was also reviewed. No payment-method or country restriction is stated.",
       "notes": "Researcher: SUBAGENT. Checked the program page and linked open-source policy. Remaining uncertainty: payment-method requirement and country restrictions are not stated; no numeric bandwidth/build quota is published.",
-      "created_at": "2026-10-22T03:34:57Z",
-      "updated_at": "2026-10-22T03:34:58Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 126,
+      "id": 103,
       "name": "New Relic Free Tier",
       "provider": "New Relic",
       "category": "dev-tools-ci",
@@ -2371,11 +2371,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://newrelic.com/pricing. Accessed 2026-10-23 UTC. Observed: the perpetual free tier includes 100 GB/month data ingest, one full platform user, unlimited basic users, 500 synthetic checks and default data retention of at least 8 days, with no credit card required. Additional ingest is $0.40/GB for original data or $0.60/GB for Data Plus.",
       "notes": "Researcher: AGENT. Accessed 2026-10-23 UTC. Official pricing page reviewed. The page says data ingestion and access stop after 100 GB until upgrade or the next month; the free tier is described as perpetual.",
-      "created_at": "2026-10-23T11:36:38Z",
-      "updated_at": "2026-10-23T11:36:38Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 88,
+      "id": 104,
       "name": "ngrok Free Plan",
       "provider": "ngrok",
       "category": "other",
@@ -2394,11 +2394,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://ngrok.com/pricing. Accessed 2026-10-22 UTC. Observed: the Free plan is $0 with $5 of one-time included usage, no additional usage beyond credit, 3 online endpoints, 1 GB data transfer, 20k HTTP/S requests per month, 4k HTTP requests per minute, 5k TCP/TLS connections per month, 1 development domain and 1 team member; the FAQ states TCP endpoints need a verified credit card that ngrok does not charge; the usage-credit FAQ states the one-time free credit lasts a year and cannot be used on data transfer out. No country restriction is stated.",
       "notes": "Researcher: SUBAGENT. The free allowance is credit-based and time-limited rather than an indefinitely renewing quota, which is why pricing_notes spells out the one-year credit. payment_method_required is unknown because signup itself is not documented as requiring a card, but TCP endpoints do.",
-      "created_at": "2026-10-22T03:35:06Z",
-      "updated_at": "2026-10-22T03:35:06Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 131,
+      "id": 105,
       "name": "No-IP Free Dynamic DNS",
       "provider": "No-IP",
       "category": "domains-dns",
@@ -2417,11 +2417,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://www.noip.com/remote-access. Accessed 2026-10-23 UTC. Observed: the free DDNS plan requires no credit card and includes one hostname, one update client, a choice of 30 No-IP-owned domains and hostname confirmation every 30 days; it does not include an SSL certificate. Paid Enhanced DDNS removes the confirmations and adds SSL.",
       "notes": "Researcher: AGENT. Accessed 2026-10-23 UTC. Official remote-access page reviewed. The page states free accounts must confirm the hostname every 30 days.",
-      "created_at": "2026-10-23T11:36:42Z",
-      "updated_at": "2026-10-23T11:36:43Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 35,
+      "id": 106,
       "name": "Northflank Developer Sandbox",
       "provider": "Northflank",
       "category": "app-deployment",
@@ -2440,11 +2440,11 @@
       "verification_status": "verified",
       "verification_evidence": "Sources: https://northflank.com/docs/v1/application/billing/pricing-on-northflank and https://northflank.com/pricing. Accessed 2026-10-22 UTC. Observed: the docs state all users must add a payment method before creating resources, regardless of plan selection, for identity verification; the Developer Sandbox allows 2 services, 2 jobs, 1 addon and up to 1 BYOC cluster and should not be used for production. The pricing page lists always-on compute with no sleeping, 2 free services, 1 free database and 2 free cron jobs and describes compute only as limited; CPU and RAM figures are not published.",
       "notes": "Researcher: SUBAGENT3. Card requirement is explicit in the docs for all plan selections (identity verification), so payment is yes even though the plan is $0.",
-      "created_at": "2026-10-22T03:34:19Z",
-      "updated_at": "2026-10-22T07:33:18Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 72,
+      "id": 107,
       "name": "Notion Education Plan",
       "provider": "Notion",
       "category": "education-benefits",
@@ -2463,11 +2463,34 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://www.notion.com/help/notion-for-education. Accessed 2026-10-22 UTC. Observed: the comparison table lists one member, up to 100 guests, unlimited uploads and 30-day edit history for the individual Education Plan, and unlimited members for student organizations; the upgrade section requires a school email as the main account email, a school listed in WHED, a single-member workspace and annual re-verification; the page warns that each school email can claim the offer only once and that student IDs are not accepted. Payment method and country restrictions are not stated.",
       "notes": "Researcher: SUBAGENT. Two plan variants exist and both are captured in included_limits. Payment method is not stated anywhere on the page, so it is recorded as unknown rather than assumed.",
-      "created_at": "2026-10-22T03:34:51Z",
-      "updated_at": "2026-10-22T03:34:52Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 21,
+      "id": 147,
+      "name": "NVIDIA NIM API Free Access",
+      "provider": "NVIDIA",
+      "category": "ai-apis",
+      "description": "Free access to hosted NVIDIA NIM API endpoints (preview APIs in the API catalog) and downloadable NIM microservices for members of the NVIDIA Developer Program, for prototyping, research, application development, and experimentation.",
+      "offer_type": "trial",
+      "pricing_notes": "Free for NVIDIA Developer Program members for prototyping via the API catalog preview APIs. Production use requires an NVIDIA AI Enterprise license (official page states pricing beginning at $4,500 per GPU per year).",
+      "included_limits": "No numeric request, token, or credit limits published on the official page. Downloadable NIM microservices may be run for research/development/experimentation on up to 16 GPUs on any infrastructure.",
+      "eligibility_requirements": "NVIDIA Developer Program membership (account creation) required. Prototyping, research, development, and testing use only; production use excluded on this route.",
+      "payment_method_required": "unknown",
+      "country_availability": "unknown",
+      "source_url": "https://docs.api.nvidia.com/nim/docs/run-anywhere",
+      "official_terms_url": "",
+      "first_seen_at": "2026-11-06T00:00:00Z",
+      "last_verified_at": "2026-11-06T00:00:00Z",
+      "expiration_at": null,
+      "verification_status": "verified",
+      "verification_evidence": "Source: https://docs.api.nvidia.com/nim/docs/run-anywhere (NVIDIA NIM docs, 'Run NIM Anywhere'). Accessed 2026-11-06 UTC. Observed: the page states members of the NVIDIA Developer Program have free access to NIM API endpoints for prototyping, and to downloadable NIM microservices for research, application development, and experimentation on up to 16 GPUs; hosted endpoints are preview APIs used by creating an account; access lasts for the duration of program membership; production use requires an NVIDIA AI Enterprise license (stated from $4,500 per GPU per year). No numeric request/token/credit limits and no payment-method requirement are stated on the page.",
+      "notes": "Researcher: Muse. Accessed 2026-11-06 UTC. Official NVIDIA NIM documentation reviewed. Remaining uncertainty: numeric quotas are not published on the official page; the widely repeated '1,000 free credits' figure does not appear there and is not recorded as fact. Access runs for the duration of program membership; no fixed end date stated.",
+      "created_at": "2026-11-06T01:36:53Z",
+      "updated_at": "2026-11-06T01:36:58Z"
+    },
+    {
+      "id": 108,
       "name": "OpenRouter Free Models",
       "provider": "OpenRouter",
       "category": "ai-apis",
@@ -2486,11 +2509,11 @@
       "verification_status": "disputed",
       "verification_evidence": "Sources: https://openrouter.ai/docs/api-reference/limits, https://openrouter.ai/docs/faq and https://openrouter.ai/terms. Accessed 2026-10-22 UTC. Observed: the limits page documents free-model rate limits of 20 requests/minute, 50 requests/day below 10 credits purchased and 1,000 requests/day at 10 or more credits; the FAQ says new users get a small free allowance and that free models have low limits and are usually unsuitable for production. Section 4.1 of the Terms (last updated August 31, 2026) still states that OpenRouter requires users to purchase Credits, minimum 5 USD, to make API calls. No signup or API call attempted; the docs-versus-terms contradiction on mandatory credits remains unresolved.",
       "notes": "Researcher: SUBAGENT2. Docs and Terms still contradict each other on whether credits are mandatory; that is the only unresolved point. Account-level exemptions could not be verified without an account.",
-      "created_at": "2026-10-22T03:34:08Z",
-      "updated_at": "2026-10-22T07:32:21Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 1,
+      "id": 109,
       "name": "Oracle Cloud Free Tier",
       "provider": "Oracle",
       "category": "vps-cloud",
@@ -2509,11 +2532,34 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://docs.oracle.com/en-us/iaas/Content/FreeTier/freetier_topic-Always_Free_Resources.htm. Accessed 2026-10-22 UTC. Observed: Always Free resources are free for the life of the account in the home region. Two VM.Standard.E2.1.Micro instances; 1,500 OCPU hours and 9,000 GB hours per month of A1.Flex, equivalent to 2 OCPUs and 12 GB memory; 200 GB combined block storage and five backups; 20 GB object storage with 50,000 API requests per month; 10 TB outbound transfer per month; two Autonomous AI Databases with 20 GB each. Idle compute instances may be reclaimed if 95th-percentile CPU and network utilization stay below 20 percent and A1 memory utilization stays below 20 percent over 7 days. Limitation: https://www.oracle.com/cloud/free/ returned HTTP 403 to the fetch tool and was not reviewed; payment-method requirement was not stated on the docs page and remains unknown.",
       "notes": "Researcher: AGENT. Accessed 2026-10-22 UTC. Official Always Free resources documentation reviewed; quotas and idle-reclamation rules observed. The marketing page https://www.oracle.com/cloud/free/ returned HTTP 403 to the fetch tool, so it was not reviewed. Payment-method requirement was not stated on the docs page and was not checked in the sign-up flow; recorded as unknown. Current docs state 2 OCPUs and 12 GB for A1, not the widely repeated 4 OCPUs and 24 GB.",
-      "created_at": "2026-10-22T01:04:52Z",
-      "updated_at": "2026-10-22T01:07:02Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 146,
+      "id": 148,
+      "name": "OVHcloud AI Endpoints Free Models",
+      "provider": "OVHcloud",
+      "category": "ai-apis",
+      "description": "OVHcloud AI Endpoints lets anyone compare and test open-weight models for text, code, voice, and vision with no sign-up required; 7 of the 21 models in the official catalog are marked Free (including Qwen3Guard-Gen 0.6B/8B, Stable Diffusion XL, and NVIDIA Riva TTS voices).",
+      "offer_type": "free_tier",
+      "pricing_notes": "7 catalog models are priced Free; the other catalog models are pay-as-you-go per million tokens. Anonymous access needs no account or API key. A separate OVHcloud Public Cloud free-trial credit (valid one month) exists and is a different offer.",
+      "included_limits": "Anonymous: 2 requests per minute, per IP and per model. Authenticated with an API key: 400 requests per minute, per Public Cloud project and per model. Official docs state no usage limits beyond rate and payload limiting (most request bodies capped at 2 MB).",
+      "eligibility_requirements": "Anonymous lane: no sign-up required. Authenticated lane: API access key tied to an OVHcloud Public Cloud project.",
+      "payment_method_required": "no",
+      "country_availability": "unknown",
+      "source_url": "https://www.ovhcloud.com/en-gb/public-cloud/ai-endpoints/catalog/",
+      "official_terms_url": "https://docs.ovhcloud.com/en/guides/public-cloud/ai-machine-learning/ai-endpoints-capabilities",
+      "first_seen_at": "2026-11-06T00:00:00Z",
+      "last_verified_at": "2026-11-06T00:00:00Z",
+      "expiration_at": null,
+      "verification_status": "verified",
+      "verification_evidence": "Sources: https://www.ovhcloud.com/en-gb/public-cloud/ai-endpoints/catalog/ and https://docs.ovhcloud.com/en/guides/public-cloud/ai-machine-learning/ai-endpoints-capabilities (updated 2026-10-29). Accessed 2026-11-06 UTC. Observed: the catalog says models can be compared and tested with no sign-up required, and 7 of 21 listed models are marked Free (Qwen3Guard-Gen-0.6B, Qwen3Guard-Gen-8B, stable-diffusion-xl-base-v10, and four NVIDIA Riva TTS voices); the docs set rate limits of 2 requests/minute per IP per model for anonymous use and 400 requests/minute per Public Cloud project per model when authenticated, and state no usage limits beyond rate and payload limiting (2 MB bodies). No expiry for the free models is stated.",
+      "notes": "Researcher: Muse. Accessed 2026-11-06 UTC. Official OVHcloud catalog and AI Endpoints documentation reviewed. Payment field reflects the anonymous no-sign-up lane. Remaining uncertainty: no expiry is stated for the free-model access; region availability not stated on the pages reviewed.",
+      "created_at": "2026-11-06T01:36:54Z",
+      "updated_at": "2026-11-06T01:36:58Z"
+    },
+    {
+      "id": 110,
       "name": "Oxylabs Residential Proxy Welcome Credit",
       "provider": "Oxylabs",
       "category": "other",
@@ -2532,11 +2578,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://oxylabs.io/products/residential-proxy-pool. Accessed 2026-10-24 UTC. Observed: the FAQ states every new account receives a one-time $5.00 welcome credit on registration, added to the balance immediately, with no commitment required to start testing, and that during that period the Residential Proxy pool can be used. The page displays the credit as 'FREE $5 toward any product' and residential pricing at $6/GB on the smallest plan. The page does not state an expiry, a payment-method requirement, country eligibility, or whether KYC is required for basic residential access. Limitations: no account was created and the credit was not used or tested; current availability was not independently confirmed.",
       "notes": "Researcher: AGENT. Accessed 2026-10-24 UTC. Reviewed the official residential product page. The page states a one-time $5.00 welcome credit, explicitly usable on the residential proxy pool, with no commitment to start. Payment method, credit expiry, KYC for basic access, and country eligibility were not stated. No account was created and no credit was used. A separate terms page was not reviewed; secondary sources were not used as evidence.",
-      "created_at": "2026-10-24T04:27:08Z",
-      "updated_at": "2026-10-24T04:27:38Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 119,
+      "id": 111,
       "name": "PostHog Free Plan",
       "provider": "PostHog",
       "category": "other",
@@ -2555,11 +2601,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://posthog.com/pricing. Accessed 2026-10-23 UTC. Observed: the Free plan is $0, requires no credit card, resets monthly, includes 1 project and 1-year retention. Monthly allowances include 1M analytics events, 5K session replays, 1M feature-flag requests, 1,500 survey responses, 100K exceptions, 10 GB logs, 1M source rows, 10K destination triggers, 100K AI observability events, 500 PostHog AI credits, 2,500 replay-vision credits, 3 Inbox PRs, 2,000 desktop credits and 10K emails.",
       "notes": "Researcher: AGENT. Accessed 2026-10-23 UTC. Official pricing page and machine-readable pricing reference reviewed. The free tier resets monthly; the paid plan raises the project limit to 6 and retention to 7 years.",
-      "created_at": "2026-10-23T11:36:30Z",
-      "updated_at": "2026-10-23T11:36:31Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 51,
+      "id": 112,
       "name": "Postman Free Plan",
       "provider": "Postman",
       "category": "dev-tools-ci",
@@ -2578,11 +2624,11 @@
       "verification_status": "disputed",
       "verification_evidence": "Source: https://www.postman.com/pricing/. Accessed 2026-10-22 UTC. Observed: the Free plan card lists 100 AI credits while the comparison table Postman AI row lists Free as 50 per month; all other Free figures agree across card and table (1 user, 1,000 monitor requests, 25 Flows credits, 10,000 API calls, 5 integrations, 1-day collection recovery, 1,000 Context Graph queries). EU-only data residency remains an Enterprise feature. The AI-credit inconsistency persists, so the Free-plan AI allowance cannot be stated.",
       "notes": "Researcher: SUBAGENT2. Single unresolved contradiction is the AI-credit count (100 versus 50); payment-method requirement and country availability are still not stated.",
-      "created_at": "2026-10-22T03:34:31Z",
-      "updated_at": "2026-10-22T07:32:22Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 30,
+      "id": 113,
       "name": "Railway Free Trial",
       "provider": "Railway",
       "category": "app-deployment",
@@ -2601,11 +2647,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://railway.com/pricing. Accessed 2026-10-22 UTC. Observed: the Free Trial is $0 with a one-time 5 USD credit expiring after 30 days and no credit card required; the platform limits table gives 2 projects, 5 services, 3 members per project, 500 MB max volume, 1 custom domain, 3 concurrent builds, 7-day log history, and per-service limits of 2 vCPU, 1 GB RAM and 2 replicas. A separate ongoing Free plan with a 1 USD/month credit and 1 project is also listed.",
       "notes": "Researcher: SUBAGENT3. Corrected the stored trial limit from 5 projects to the current table value of 2 projects. Trial-expiry behaviour and regional restrictions are still not stated.",
-      "created_at": "2026-10-22T03:34:15Z",
-      "updated_at": "2026-10-22T07:33:17Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 83,
+      "id": 114,
       "name": "Read the Docs Community",
       "provider": "Read the Docs",
       "category": "open-source-services",
@@ -2624,11 +2670,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://about.readthedocs.com/choosing-a-platform/. Accessed 2026-10-22 UTC. Observed: the Community plan is free forever for open-source documentation, requires public Git repositories and public documentation, displays EthicalAds advertising, provides less build time and resources than Business, and limits support to email for platform issues. Business plans start at $50 per month. No numeric build quota, OSI license requirement, approval process or payment-method requirement is stated.",
       "notes": "Researcher: SUBAGENT. Read the platform comparison page. Remaining uncertainty: whether a payment method or specific license is required is not stated; no numeric build quota is published.",
-      "created_at": "2026-10-22T03:35:02Z",
-      "updated_at": "2026-10-22T03:35:02Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 99,
+      "id": 115,
       "name": "Red Hat OpenShift Developer Sandbox",
       "provider": "Red Hat",
       "category": "vps-cloud",
@@ -2647,11 +2693,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://developers.redhat.com/developer-sandbox/FAQ. Accessed 2026-10-22 UTC. Observed: a free 30-day trial on a shared multi-tenant OpenShift cluster requiring a Red Hat account and valid phone number but no credit card; pods are deleted after 12 consecutive hours and Linux VMs shut down after 1 hour; the sandbox includes OpenShift, Dev Spaces, Pipelines, Serverless, Ansible, OpenShift AI and Virtualization; users can export work and start another trial.",
       "notes": "Researcher: SUBAGENT. Reviewed the Developer Sandbox FAQ. Remaining uncertainty: per-namespace CPU, memory and storage quotas were not stated in the FAQ text reviewed.",
-      "created_at": "2026-10-22T03:35:16Z",
-      "updated_at": "2026-10-22T03:35:16Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 39,
+      "id": 116,
       "name": "Redis Cloud Free Database (30 MB)",
       "provider": "Redis",
       "category": "databases-storage",
@@ -2670,11 +2716,11 @@
       "verification_status": "verified",
       "verification_evidence": "Sources: https://redis.io/pricing/ and https://redis.io/docs/latest/operate/rc/databases/create-database/create-free-database/. Accessed 2026-10-22 UTC. Observed: pricing still lists a $0 free Essentials database of up to 30 MB with shared deployment, best-effort SLA and community support; docs state 30 MB and one free database per account, created on AWS, Google Cloud or Azure with a region chosen at creation. Payment method, idle policy, backups and country eligibility for the free database are not stated.",
       "notes": "Researcher: SUBAGENT3. The 30 MB free trial badge on the pricing page belongs to the paid Redis Flex tier, not the free database. Free-database payment-method, idle, backup and country rules are not stated on either page.",
-      "created_at": "2026-10-22T03:34:22Z",
-      "updated_at": "2026-10-22T07:33:15Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 14,
+      "id": 117,
       "name": "Render Free Web Services",
       "provider": "Render",
       "category": "app-deployment",
@@ -2693,11 +2739,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://render.com/docs/free. Accessed 2026-10-22 UTC. Observed: 750 free instance hours per workspace per calendar month, spin-down after 15 minutes idle, 0.1 CPU and 512 MB RAM, ephemeral filesystem, suspension for the rest of the month when hours run out; free Postgres expires 30 days after creation after a 14-day grace period. The docs state services are suspended rather than billed when bandwidth is exceeded without a payment method on file but do not state that a card is required or never required.",
       "notes": "Researcher: SUBAGENT3. The bandwidth wording implies a payment method is optional but no page states that a card is never required, so payment is recorded as unknown.",
-      "created_at": "2026-10-22T01:06:15Z",
-      "updated_at": "2026-10-22T07:33:16Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 93,
+      "id": 118,
       "name": "Resend Free Plan",
       "provider": "Resend",
       "category": "other",
@@ -2716,11 +2762,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://resend.com/pricing. Accessed 2026-10-22 UTC. Observed: the Free transactional plan is $0/month with 3,000 emails per month and a stated 100-email daily limit; the plan comparison lists 3 custom domains, 3 inboxes, 30-day retention, 1 webhook endpoint and 5 AI credits per month on Free; the automation section lists 10,000 runs per month on Free; the marketing table lists 1,000 contacts on Free. The FAQ states there is no free trial but a free-forever plan, and that education pricing is not offered.",
       "notes": "Researcher: SUBAGENT. The page says 'We accept all major credit cards' but does not state whether a card is required for the Free plan, so payment_method_required is unknown rather than assumed.",
-      "created_at": "2026-10-22T03:35:11Z",
-      "updated_at": "2026-10-22T03:35:12Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 54,
+      "id": 119,
       "name": "Rumahweb .MY.ID Domain Registration",
       "provider": "Rumahweb",
       "category": "domains-dns",
@@ -2739,11 +2785,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://www.rumahweb.com/domain-indonesia/. Accessed 2026-10-22 UTC. Observed: the .MY.ID row lists registration Rp9,900, renewal Rp25,000, and restore Rp100,000; the row uses promo-price styling and no promo end date is shown. The page does not state tax treatment or document requirements for .MY.ID.",
       "notes": "Researcher: SUBAGENT. Price table read directly; no PPN statement found. Remaining uncertainty: promo duration, first-year limitation, and tax treatment. This is a paid registration offer; BANSOS has no paid-offer type, so offer_type is unknown.",
-      "created_at": "2026-10-22T03:34:34Z",
-      "updated_at": "2026-10-22T03:34:34Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 23,
+      "id": 120,
       "name": "SambaNova Cloud Free Tier",
       "provider": "SambaNova",
       "category": "ai-apis",
@@ -2762,11 +2808,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://docs.sambanova.ai/docs/en/models/rate-limits. Accessed 2026-10-22 UTC. Observed: the Free Tier applies when no payment method is linked; DeepSeek-V3.1, Meta-Llama-3.3-70B-Instruct, and gpt-oss-120b each have 20 RPM, 20 RPD, and 200,000 TPD; preview models DeepSeek-V3.2 and gemma-4-31B-it have the same limits. The page does not state country availability or per-token prices.",
       "notes": "Researcher: SUBAGENT. Reviewed the official rate-limit page. A SambaNova terms URL was not confirmed (https://sambanova.ai/terms-of-use returned 404), so official_terms_url is empty. Preview models are described as for evaluation and not production; broader commercial-use terms were not established from the reviewed page.",
-      "created_at": "2026-10-22T03:34:10Z",
-      "updated_at": "2026-10-22T03:34:10Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 28,
+      "id": 121,
       "name": "Scaleway Generative APIs Free Tier",
       "provider": "Scaleway",
       "category": "ai-apis",
@@ -2785,11 +2831,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://www.scaleway.com/en/docs/generative-apis/faq/ and https://www.scaleway.com/en/docs/organizations-and-projects/organization/organization-quotas/. Accessed 2026-10-22 UTC. Observed: the Free Tier allows up to 1,000,000 tokens for token-billed models and 60 minutes of audio transcription; after that, per-token and per-audio-minute billing applies; the minimum billing unit is 1,000 tokens; the free tier is applied to the most expensive tokens first; Serverless models are hosted in Paris, France. Published rate limits for accounts with a validated payment method are 200k TPM and 300 RPM per model with 100 concurrent requests, rising after identity verification. The FAQ does not state a card requirement for the free tier or a country eligibility list.",
       "notes": "Researcher: SUBAGENT. Reviewed the official FAQ, rate-limit page, organization-quota page, and quickstart. The FAQ does not state that the allowance renews or expires, and it does not limit it to new customers. Payment method is marked unknown because the free tier is not explicitly conditioned on a card while the published rate limits are for accounts with a validated payment method. No separate terms page was reviewed.",
-      "created_at": "2026-10-22T03:34:14Z",
-      "updated_at": "2026-10-22T03:34:14Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 50,
+      "id": 122,
       "name": "Semaphore Free Credits",
       "provider": "Semaphore",
       "category": "dev-tools-ci",
@@ -2808,11 +2854,11 @@
       "verification_status": "verified",
       "verification_evidence": "Sources: https://semaphore.io/pricing and https://semaphore.io/tos. Accessed 2026-10-22 UTC. Observed: the pricing page still advertises 15 USD of free credits per month, about 2,000 Ubuntu x64 2-vCPU minutes, 20 concurrent jobs by default, 100 GB/month artifact storage, 20 GB/month egress and 9.6 GB cache per project, with per-minute rates for Ubuntu x64, Arm, macOS and self-hosted. Terms (updated 2026-09-14) section 4 requires credit card or mobile-phone billing information to obtain paid Services, so payment is recorded as no for the free credit; no explicit no-card sentence exists.",
       "notes": "Researcher: SUBAGENT3. Payment conclusion derives from Terms section 4, which ties billing information to paid Services; no explicit no-card statement exists on the pricing page and signup was not attempted. Terms note services are targeted at Serbia and the US, with local-law compliance the user responsibility.",
-      "created_at": "2026-10-22T03:34:30Z",
-      "updated_at": "2026-10-22T07:33:30Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 12,
+      "id": 123,
       "name": "Sentry Developer Plan",
       "provider": "Sentry",
       "category": "dev-tools-ci",
@@ -2831,11 +2877,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://sentry.io/pricing/. Accessed 2026-10-22 UTC. Observed: Developer plan at 0 USD with 1 user, 5,000 errors per month, 5 GB logs, 5 GB metrics, 5 million spans, 50 session replays and 30-day data retention. Limitation: the page did not state a payment-method requirement, so that field remains unknown; overage behavior on the free plan was not re-checked.",
       "notes": "Researcher: AGENT. Accessed 2026-10-22 UTC. Official pricing page reviewed. Quotas are monthly and subject to change; overage handling on the free plan was not re-checked. Payment-method requirement recorded as unknown.",
-      "created_at": "2026-10-22T01:06:14Z",
-      "updated_at": "2026-10-22T01:07:23Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 108,
+      "id": 124,
       "name": "Sevalla Static Site Hosting",
       "provider": "Sevalla (Kinsta)",
       "category": "web-hosting",
@@ -2854,11 +2900,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://sevalla.com/static-site-hosting/. Accessed 2026-10-22 UTC. Observed: static sites are listed at $0 with 100 sites per account, 600 build minutes/month, 100 GB bandwidth/month per account, 1 GB build size per site, 1 concurrent build per site, 260+ PoPs, Git-based deploys and previews; usage beyond limits scales with billing. The page references a fair use policy without publishing it. No payment-method statement.",
       "notes": "Researcher: SUBAGENT3. The terms URL is Kinsta ToS, which the Sevalla footer links; Sevalla is a Kinsta product but the page does not state that Kinsta ToS is the operative agreement for the Sevalla brand. Card requirement and country eligibility are not stated.",
-      "created_at": "2026-10-22T03:35:26Z",
-      "updated_at": "2026-10-22T07:33:21Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 80,
+      "id": 125,
       "name": "Snyk Secure Developer Program",
       "provider": "Snyk",
       "category": "open-source-services",
@@ -2877,11 +2923,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://snyk.io/open-source/. Accessed 2026-10-22 UTC. Observed: the program offers a complimentary full Snyk account with enterprise entitlements and no usage limits for approved open-source projects, plus community Discord support and setup/advisory help. Eligibility requires a community project not backed by a corporate entity, a link back to Snyk in the README and on the project website, permission to use the project logo and content, and application approval. The number of seats/repositories and any payment-method or country requirement are not stated.",
       "notes": "Researcher: SUBAGENT. Read the program page. Remaining uncertainty: seat/repository counts and payment-method/country requirements are not stated.",
-      "created_at": "2026-10-22T03:34:59Z",
-      "updated_at": "2026-10-22T03:35:00Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 86,
+      "id": 126,
       "name": "Socket Open Source Program",
       "provider": "Socket",
       "category": "open-source-services",
@@ -2900,11 +2946,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://docs.socket.dev/docs/faq. Accessed 2026-10-22 UTC. Observed: the FAQ states that public open-source projects with a valid OSI license can request a free upgrade to the Business plan, and that Socket's plans are Free, Team, Business and Enterprise. The FAQ does not state Business-plan seat, repository or scan limits, approval details, or a payment-method requirement. The Socket pricing page and open-source announcement returned HTTP 403 (Cloudflare) when opened, so those limits could not be confirmed.",
       "notes": "Researcher: SUBAGENT. Read the official docs FAQ. Remaining uncertainty: Business-plan limits, approval criteria and payment-method requirement are unconfirmed because pricing and announcement pages were blocked with HTTP 403.",
-      "created_at": "2026-10-22T03:35:04Z",
-      "updated_at": "2026-10-22T03:35:05Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 18,
+      "id": 127,
       "name": "SonarQube Cloud Free Plan",
       "provider": "SonarSource",
       "category": "open-source-services",
@@ -2923,11 +2969,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://www.sonarsource.com/plans-and-pricing/. Accessed 2026-10-22 UTC. Observed: the Developer offering is free forever for private projects up to 50,000 lines of code, with the page stating no card and no expiry. Public OSI-licensed repositories are covered by the OSS offering, which the page says includes the same features as the paid Pro plan. The free tier is a SonarQube Team plan for private projects. Limitation: language coverage, branch analysis and exact feature parity between OSS and paid plans were not fully enumerated.",
       "notes": "Researcher: AGENT. Accessed 2026-10-22 UTC. Official plans and pricing page reviewed. The exact boundary between the Free plan and the open-source plan for public projects was not fully enumerated; the 50,000-line figure applies to private code. Branch analysis and language coverage may differ by plan.",
-      "created_at": "2026-10-22T01:06:42Z",
-      "updated_at": "2026-10-22T01:07:57Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 43,
+      "id": 128,
       "name": "SQLite Cloud Free Plan",
       "provider": "SQLite Cloud",
       "category": "databases-storage",
@@ -2946,11 +2992,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://www.sqlite.ai/pricing (also served at https://sqlitecloud.io/pricing). Accessed 2026-10-22 UTC. Observed: Free lists 1 CPU, 256 MB RAM, 512 MB storage, 20 max connections, no snapshot, 1-day log retention and 500K edge function invocations per month; Dev $19/month and Pro $79/month are the paid upgrades. No time limit or payment-method statement was observed.",
       "notes": "Researcher: SUBAGENT. Pricing page reviewed; whether the Free plan is permanent and its region list were not stated. The same page is served at sqlitecloud.io and sqlite.ai.",
-      "created_at": "2026-10-22T03:34:25Z",
-      "updated_at": "2026-10-22T03:34:25Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 132,
+      "id": 129,
       "name": "Storj Object Storage Free Trial",
       "provider": "Storj",
       "category": "databases-storage",
@@ -2969,11 +3015,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://www.storj.io/pricing. Accessed 2026-10-23 UTC. Observed: the free trial lasts 30 days, includes 25 GB of storage and 2 Object Mount licenses, and requires no credit card. After the trial, Standard is $7/TB/month storage and $7/TB egress with a $5 minimum monthly fee; the page says the minimum does not apply during the free trial.",
       "notes": "Researcher: AGENT. Accessed 2026-10-23 UTC. Official pricing page reviewed. The minimum monthly fee begins after the trial; free-trial accounts are excluded.",
-      "created_at": "2026-10-23T11:36:43Z",
-      "updated_at": "2026-10-23T11:36:44Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 33,
+      "id": 130,
       "name": "Streamlit Community Cloud",
       "provider": "Streamlit",
       "category": "app-deployment",
@@ -2992,11 +3038,11 @@
       "verification_status": "verified",
       "verification_evidence": "Sources: https://streamlit.io/cloud and https://docs.streamlit.io/deploy/streamlit-community-cloud/manage-your-app. Accessed 2026-10-22 UTC. Observed: the Cloud page describes Community Cloud as totally free and public apps only, with GitHub sign-in; the docs state shared resource limits of 0.078-2 CPU cores, 690 MB-2.7 GB memory and 50 GB storage, hibernation after 12 hours without traffic, and that limits may change at any time without notice (page dated February 2024). No payment-method requirement is stated.",
       "notes": "Researcher: SUBAGENT3. No paid tier for Community Cloud; the paid alternative is the separate Streamlit in Snowflake. Card requirement is not stated; signup is GitHub-based.",
-      "created_at": "2026-10-22T03:34:17Z",
-      "updated_at": "2026-10-22T07:33:20Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 9,
+      "id": 131,
       "name": "Supabase Free Plan",
       "provider": "Supabase",
       "category": "databases-storage",
@@ -3015,11 +3061,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://supabase.com/pricing. Accessed 2026-10-22 UTC. Observed: Free plan at 0 USD with 2 active projects, 500 MB database space, 1 GB file storage, 5 GB egress per month and 50,000 monthly active users. Free projects are paused after one week of inactivity. Limitation: the pricing page did not state a payment-method requirement, so that field remains unknown; backup retention and restore behavior were not re-checked.",
       "notes": "Researcher: AGENT. Accessed 2026-10-22 UTC. Official pricing page reviewed. Paused projects require manual restore; restoration behavior and backup retention were not re-checked. Payment-method requirement recorded as unknown.",
-      "created_at": "2026-10-22T01:05:57Z",
-      "updated_at": "2026-10-22T01:07:21Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 104,
+      "id": 132,
       "name": "Surge Free Plan",
       "provider": "Surge",
       "category": "web-hosting",
@@ -3038,11 +3084,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://surge.sh/pricing. Accessed 2026-10-22 UTC. Observed: the Free plan is $0 and includes unlimited publishing, a custom domain and basic SSL; Professional is $30/month with custom SSL, force HTTPS, CORS, custom redirects and password protection. No free-plan storage, bandwidth or project limits and no payment-method statement appear on the page.",
       "notes": "Researcher: SUBAGENT. Reviewed the pricing page. Remaining uncertainty: no free-tier storage/bandwidth/project limits are published, and payment-method requirement is not stated.",
-      "created_at": "2026-10-22T03:35:21Z",
-      "updated_at": "2026-10-22T03:35:21Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 142,
+      "id": 133,
       "name": "Tableau Desktop Public Edition for Students",
       "provider": "Tableau",
       "category": "education-benefits",
@@ -3061,11 +3107,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://www.tableau.com/academic/students. Accessed 2026-10-23 UTC through a text proxy because direct requests returned HTTP 403. Observed: 'Get Tableau for Free' leads to Tableau Desktop Public Edition; the FAQ says the Tableau for Students program shifted to Tableau Desktop Public Edition, no renewal is required, it is not available for commercial use, and it cannot publish to Tableau Cloud (only Tableau Public); the FAQ says part-time learners and apprentices can also access it. No payment or country information was stated.",
       "notes": "Researcher: AGENT. Accessed 2026-10-23 UTC. Direct requests to the official page returned HTTP 403, so the page text was reviewed through a text proxy of the official URL. The page states the student program now uses Tableau Desktop Public Edition, free with no renewal, limited to Tableau Public publishing and non-commercial use. Payment and country information were not stated.",
-      "created_at": "2026-10-23T23:40:15Z",
-      "updated_at": "2026-10-23T23:40:15Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 87,
+      "id": 134,
       "name": "Tailscale Personal Plan",
       "provider": "Tailscale",
       "category": "other",
@@ -3084,11 +3130,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://tailscale.com/pricing. Accessed 2026-10-22 UTC. Observed: the Personal plan is $0 and labelled 'Free forever' with up to 6 users, unlimited user devices, up to 3 ACL groups, 50 tagged resources and 1,000 minutes per month of ephemeral resources; the comparison table confirms those limits and notes tagged resources beyond 50 cost $1 per month each; Standard is $8 and Premium $18 per user per month. The page does not state a payment method or country restriction, and the business-versus-personal-use FAQ answer was not rendered in the retrieved content.",
       "notes": "Researcher: SUBAGENT. Recorded as medium confidence because the personal-versus-business eligibility answer on the FAQ could not be read, even though the plan limits themselves are explicit. No separate terms page was reviewed.",
-      "created_at": "2026-10-22T03:35:05Z",
-      "updated_at": "2026-10-22T03:35:05Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 133,
+      "id": 135,
       "name": "Travis CI Free Trial Plan",
       "provider": "Travis CI",
       "category": "dev-tools-ci",
@@ -3107,11 +3153,11 @@
       "verification_status": "disputed",
       "verification_evidence": "Sources: https://www.travis-ci.com/pricing/, https://cdn.travis-ci.com/plans, and https://docs.travis-ci.com/user/billing-overview/. Accessed 2026-10-23 UTC. Conflict: the pricing page's embedded plan configuration lists an enabled Free plan at $0 with 10,000 private build credits, but the official billing documentation says 'Free Trial Plans are currently unavailable.' That documentation also says the trial, when available, grants 10,000 trial credits (1,000 Linux build minutes) valid for 14 days, requires a credit card and a $1 authorization, is limited to new users once, and does not replenish credits. The free trial's current availability is therefore disputed; it should not be treated as currently available.",
       "notes": "Researcher: AGENT. Accessed 2026-10-23 UTC. Conflict: the official pricing page's embedded plan configuration lists an enabled Free plan with 10,000 private credits, but the official billing documentation says Free Trial Plans are currently unavailable and describes the trial as card-gated, 14 days, and available only once. Record marked disputed; do not treat the free trial as currently available.",
-      "created_at": "2026-10-23T11:36:44Z",
-      "updated_at": "2026-10-23T11:40:30Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 37,
+      "id": 136,
       "name": "Turso Cloud Free Plan",
       "provider": "Turso",
       "category": "databases-storage",
@@ -3130,11 +3176,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://turso.tech/pricing. Accessed 2026-10-22 UTC. Observed: Free is $0/month with no credit card required; 100 databases, 5 GB storage, 500M rows read and 10M rows written per month, 3 GB monthly syncs, 1-day point-in-time restore, community support. A banner states Turso is joining Supabase but no free-plan discontinuation is stated. Terms page last updated March 2024.",
       "notes": "Researcher: SUBAGENT3. Pricing page states no credit card required. Terms page last updated March 2024. No idle/suspension policy, region list or country eligibility stated on reviewed pages. Site banner still says Turso is joining Supabase, a future-availability risk.",
-      "created_at": "2026-10-22T03:34:20Z",
-      "updated_at": "2026-10-22T07:33:14Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 141,
+      "id": 137,
       "name": "Unity Student Plan",
       "provider": "Unity",
       "category": "education-benefits",
@@ -3153,11 +3199,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://unity.com/products/unity-student. Accessed 2026-10-23 UTC. Observed: the Unity Student plan is free and includes the Unity Pro Editor, an Odin Inspector and Validator education license, a Synty asset bundle, and Unity Cloud access; eligibility is age 16 or older, enrollment in an accredited educational institution, and current classes earning credit toward a diploma, degree, or professional license; SheerID verification is required; one Unity ID per student; the license is valid for one year and renewable while enrolled; a school email is not required. No country list or payment requirement was stated.",
       "notes": "Researcher: AGENT. Accessed 2026-10-23 UTC. Reviewed the official Unity Student plan page and its FAQ. The plan is for individual students; classroom and lab use requires the separate free Education Grant License. Country availability and payment-method requirement were not stated.",
-      "created_at": "2026-10-23T23:40:14Z",
-      "updated_at": "2026-10-23T23:40:14Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 136,
+      "id": 138,
       "name": "UpCloud Free Trial Credits",
       "provider": "UpCloud",
       "category": "vps-cloud",
@@ -3176,11 +3222,11 @@
       "verification_status": "disputed",
       "verification_evidence": "Sources: https://upcloud.com/global/ and https://upcloud.com/docs/getting-started/free-trial/. Accessed 2026-10-23 UTC. Observed: the homepage advertises '$500 free credits - Valid for the first 30 days'; the free-trial documentation says the trial lasts 7 days from activation, certain promotions may offer longer periods, the trial must be started within 365 days of registration, and a credit card plus billing information are required with a 0 or 1 EUR/USD temporary authorization and no charge before, during, or after the trial. The duration therefore conflicts between official pages; the credit amount and card requirement are consistent.",
       "notes": "Researcher: AGENT. Accessed 2026-10-23 UTC. Official pages conflict on duration: the homepage advertises 30 days and $500 in credits, while the free-trial documentation says the standard trial is 7 days and promotions may be longer. Recorded as disputed rather than choosing one duration.",
-      "created_at": "2026-10-23T23:39:15Z",
-      "updated_at": "2026-10-23T23:41:34Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 40,
+      "id": 139,
       "name": "Upstash Redis Free Plan",
       "provider": "Upstash",
       "category": "databases-storage",
@@ -3199,11 +3245,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://upstash.com/pricing/redis. Accessed 2026-10-22 UTC. Observed: Free is $0/month with 250 MB max data, 10 GB bandwidth, 10,000 max commands/sec, 10 MB request size, 100 MB record size, 1 index of 10K docs and 1 database; the FAQ adds 500K commands per month and states that entering a credit card upgrades the database to pay-as-you-go. The instant database endpoint explicitly needs no signup, card or API key and is deleted after 3 days unless claimed. Payment method for the Free plan itself is not stated.",
       "notes": "Researcher: SUBAGENT3. Payment requirement is only addressed indirectly: entering a credit card upgrades the database to pay-as-you-go, and the instant database endpoint needs no signup, card or API key. No page states that the Free plan never asks for a card, so the earlier no value was inference and is now recorded as unknown.",
-      "created_at": "2026-10-22T03:34:23Z",
-      "updated_at": "2026-10-22T07:33:15Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 89,
+      "id": 140,
       "name": "UptimeRobot Free Plan",
       "provider": "UptimeRobot",
       "category": "other",
@@ -3222,11 +3268,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://uptimerobot.com/pricing/. Accessed 2026-10-22 UTC. Observed: the Free plan is $0/month with the statement 'No credit card required!'; it lists 50 monitors, a 5-minute monitoring interval, 1 status page, 3-month data retention, 5 integrations, and no login or notify seats; the comparison table confirms SMS and voice credits are not included on Free. Paid tiers and per-country SMS rates are also listed.",
       "notes": "Researcher: SUBAGENT. Limits taken from both the plan card and the feature comparison table on the same page. No country restriction statement was found.",
-      "created_at": "2026-10-22T03:35:07Z",
-      "updated_at": "2026-10-22T03:35:07Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 32,
+      "id": 141,
       "name": "Val Town Free Plan",
       "provider": "Val Town",
       "category": "app-deployment",
@@ -3245,11 +3291,11 @@
       "verification_status": "verified",
       "verification_evidence": "Sources: https://www.val.town/pricing and https://www.val.town/limits. Accessed 2026-10-22 UTC. Observed: Free is $0 with no custom domains, 15-minute cron intervals, 1-minute wall clock per run, 3-day log retention, 100,000 runs/day, 100,000 log lines/day, 1,000 API requests/minute, 2,500 vals, 0 private vals, 10 crons per val, 4 GiB worker memory and 80,000 characters per file. The pricing page says unlimited public vals while the limits page caps vals at 2,500, so the numeric cap was recorded. Neither page states a payment-method requirement.",
       "notes": "Researcher: SUBAGENT3. Internal inconsistency: the pricing page says unlimited public vals while the limits page caps vals at 2,500 for Free; the numeric cap was recorded. Payment method and country eligibility are not stated.",
-      "created_at": "2026-10-22T03:34:17Z",
-      "updated_at": "2026-10-22T07:33:19Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 29,
+      "id": 142,
       "name": "Vercel Hobby Plan",
       "provider": "Vercel",
       "category": "app-deployment",
@@ -3268,11 +3314,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://vercel.com/pricing. Accessed 2026-10-22 UTC. Observed: Hobby is $0/month; the FAQ limits it to personal, non-commercial use; the table lists 1M CDN requests, 100 GB fast data transfer, 1M function invocations, 4 hours Fluid Active CPU, and 360 GB-hours memory per month. The limits page states 200 projects, 100 deployments/day, 1 concurrent build, 45-minute build step, and that Hobby accounts cannot buy extra usage.",
       "notes": "Researcher: SUBAGENT. Pricing and limits pages reviewed. Payment-method requirement and regional availability were not stated on the reviewed pages.",
-      "created_at": "2026-10-22T03:34:15Z",
-      "updated_at": "2026-10-22T03:34:15Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 27,
+      "id": 143,
       "name": "Voyage AI Free Tokens",
       "provider": "Voyage AI",
       "category": "ai-apis",
@@ -3291,11 +3337,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://docs.voyageai.com/docs/pricing. Accessed 2026-10-22 UTC. Observed: the current table gives 200 million free tokens to voyage-4-large, voyage-4, voyage-4-lite, voyage-context-4 and voyage-code-4, and 50 million to voyage-finance-2, voyage-law-2 and voyage-code-2 (voyage-multilingual-2 also appears in the 50-million prose), plus 200M text tokens and 150B pixels for the multimodal pair and 200 million tokens for rerank-3 and rerank-3-lite. The Batch paragraph confirms free credits do not apply to Batch usage. The page still names voyage-code-3 and rerank-2.x as free in prose while the older-models table lists them without free tokens; only internally consistent current-model figures were recorded.",
       "notes": "Researcher: SUBAGENT2. Free allowance is quantity-limited, not documented as monthly. Card requirement for using the free allowance remains unknown; only paid Tier 1 rate limits are documented as requiring a payment method. Residual doc bug: prose still names voyage-code-3 and rerank-2.x as free while the older-models table lists them without free tokens.",
-      "created_at": "2026-10-22T03:34:13Z",
-      "updated_at": "2026-10-22T07:32:23Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 134,
+      "id": 144,
       "name": "Xata Cloud Free Trial",
       "provider": "Xata",
       "category": "databases-storage",
@@ -3314,11 +3360,11 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://xata.io/pricing. Accessed 2026-10-23 UTC. Observed: the pricing page's structured FAQ states that Xata Cloud starts with a 14-day free trial and that a credit card is required after the trial to keep using Xata on Pay As You Go. The page also states that open source is free forever and that the sign-up button requires no credit card. Cloud pricing starts at $0.012/hr plus $0.28/GB/month storage. The page did not state a trial credit amount.",
       "notes": "Researcher: AGENT. Accessed 2026-10-23 UTC. Official pricing page reviewed, including its structured FAQ data. The visible page says no credit card is required; the FAQ states a 14-day free trial and a card is required after the trial to continue on Pay As You Go.",
-      "created_at": "2026-10-23T11:38:53Z",
-      "updated_at": "2026-10-23T11:39:16Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 65,
+      "id": 145,
       "name": "ZeroSSL Free Plan",
       "provider": "ZeroSSL",
       "category": "domains-dns",
@@ -3337,11 +3383,11 @@
       "verification_status": "verified",
       "verification_evidence": "Sources: https://zerossl.com/pricing/ and https://zerossl.com/terms/. Accessed 2026-10-22 UTC. Observed: the Free plan is still $0/month with no credit card required, 3 90-day certificates, annual certificates and wildcards under current renewal language, multi-domain, wildcard, ACME, REST API, audit log and self-service support; the FAQ repeats that no credit card is needed for the Free plan. Terms (last modified 2021-03-23) require users to be 18 or older and allow ZeroSSL to change or terminate free accounts. This is a TLS certificate offer, not DNS hosting.",
       "notes": "Researcher: SUBAGENT3. This is a TLS certificate offer, not DNS hosting. Paid prices are billed-yearly figures. Terms state users must be 18 or older and that ZeroSSL may change the free account structure or terminate free accounts at any time.",
-      "created_at": "2026-10-22T03:34:45Z",
-      "updated_at": "2026-10-22T07:33:27Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     },
     {
-      "id": 121,
+      "id": 146,
       "name": "ZeroTier Personal Plan",
       "provider": "ZeroTier",
       "category": "other",
@@ -3360,8 +3406,8 @@
       "verification_status": "verified",
       "verification_evidence": "Source: https://www.zerotier.com/pricing/. Accessed 2026-10-23 UTC. Observed: the Personal plan is free for personal, non-commercial use with 10 devices, one network and one network admin. Commercial use requires a paid Business plan. The page did not state a payment-method requirement for the free Personal plan.",
       "notes": "Researcher: AGENT. Accessed 2026-10-23 UTC. Official pricing page reviewed. Payment-method requirement for the free Personal plan was not stated.",
-      "created_at": "2026-10-23T11:36:32Z",
-      "updated_at": "2026-10-23T11:36:33Z"
+      "created_at": "2026-11-06T01:34:40Z",
+      "updated_at": "2026-11-06T01:34:40Z"
     }
   ]
 }
